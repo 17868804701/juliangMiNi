@@ -1,0 +1,117 @@
+/*顶部tab*/
+.nav {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 20rpx;
+  border-bottom: 1px solid ghostwhite;
+}
+.body {
+  background-color: white;
+  /* border-top: 1rpx solid #eee; */
+}
+.default {
+  line-height: 90rpx;
+  text-align: center;
+  flex: 1;
+  border-right: 0px solid gainsboro;
+  color: #333;
+}
+.red {
+  line-height: 90rpx;
+  text-align: center;
+  color: #4CAF50;
+  flex: 1;
+  border-right: 0px solid gainsboro;
+  border-bottom: 4px solid #4CAF50;
+}
+.red view {
+  border-bottom: 2px solid #4CAF50;
+}
+.hidden {
+  display: none;
+  text-align: center;
+}
+.title {
+  font-size: 30rpx;
+  border-bottom: 0px solid whitesmoke;
+  background-color: white;
+}
+/* 内容区 */
+.introduce{
+ /* text-align: center; */
+}
+
+
+
+
+.list{
+ width: 92%;
+ border: 1rpx solid ghostwhite;
+ height: 240rpx;
+ border-radius: 10rpx;
+ margin-left: 4%;
+ margin-top: 20rpx;
+  box-shadow: 2px 2px 10px 	#e0e0e0; 
+}
+.name{
+width: 100%;
+height: 75rpx;
+border-bottom: 1rpx dashed gainsboro;
+font-size: 35rpx;
+line-height: 75rpx;
+}
+.name text{
+  color: #333; 
+  /* font-weight: bold;  */
+ margin-left: 20rpx;
+}
+.info text{
+font-size: 25rpx;
+}
+.ggxh{
+ position: absolute;
+ margin-top: 10rpx;
+ margin-left: 20rpx;
+}
+.sccj{
+ position: absolute;
+ margin-top: 110rpx;
+ margin-left: 20rpx;
+}
+.ccbm{
+ position: absolute;
+ margin-top: 60rpx;
+ margin-left: 20rpx;
+}
+.ccsj{
+ position: absolute;
+ margin-top: 60rpx;
+ margin-left: 400rpx;
+}
+.dj{
+ position: absolute;
+ margin-left:400rpx;
+ margin-top: 10rpx;
+}
+.add_shebei{
+ background: #4CAF50;
+ height: 80rpx;
+ line-height: 80rpx;
+ color: white;
+ font-size: 30rpx;
+ width: 75%;
+ margin-top: 40rpx;
+ margin-bottom: 40rpx;
+}
+.shenbao{
+  width: 60%;
+  height: 80rpx;
+  background: #4CAF50;
+  color: white;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+

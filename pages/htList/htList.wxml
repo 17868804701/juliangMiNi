@@ -1,0 +1,8 @@
+<view class='container'>
+  <view class='list' bindtap='htManger' wx:for="{{htList}}" data->
+    <image src='../img/ht_icon.png'></image>
+    <text class='name'>{{item.firstPartyCompanyName}}</text>
+    <text class='no'>企业电话:{{item.firstPartyIphone}}</text>
+    <text class='fuzeren'>负责人:{{item.firstPartyLinkman}}</text>
+  </view>
+</view>

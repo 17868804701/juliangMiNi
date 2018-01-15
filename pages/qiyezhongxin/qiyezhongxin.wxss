@@ -1,0 +1,70 @@
+/* pages/qiyezhongxin/qiyezhongxin.wxss */
+#head{
+ width: 110rpx;
+ height: 110rpx;
+ border-radius: 65rpx;
+ position: absolute;
+ margin-top:10rpx;
+ margin-left:20rpx;
+}
+.head text{
+ /* position: absolute; */
+margin-left: 145rpx;
+font-size: 31rpx;
+/* font-weight: bold; */
+color: #333;
+}
+.head{
+ height: 130rpx;
+ border-bottom: 1rpx solid ghostwhite;
+ line-height: 130rpx;
+}
+.right{
+ width:30rpx;
+ height: 30rpx;
+ float: right;
+ margin-top: 50rpx;
+ margin-right: 30rpx;
+}
+.btn_logout{
+ background: #4CAF50;
+ height: 80rpx;
+ line-height: 80rpx;
+ width: 90%;
+ color: white;
+ font-size: 30rpx;
+ margin-top: 40rpx;
+}
+
+
+.item{
+ height: 100rpx;
+ line-height: 100rpx;
+ border-bottom: 1px solid ghostwhite;
+}
+.right1{
+ width:30rpx;
+ height: 30rpx;
+ float: right;
+ margin-top: 35rpx;
+ margin-right: 30rpx;
+}
+.item text{
+ position: absolute;
+ font-size: 30rpx;
+ margin-left: 23rpx;
+}
+.icon{
+ width: 40rpx;
+ height: 40rpx;
+ margin-top: 30rpx;
+ margin-left: 20rpx;
+ z-index: 111111111111;
+}
+.xgmm{
+  width: 40rpx;
+ height: 40rpx;
+ margin-top: 30rpx;
+ margin-left: 20rpx;
+ z-index: 111111111111;
+}

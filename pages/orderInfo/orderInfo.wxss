@@ -1,0 +1,86 @@
+/* pages/orderInfo/orderInfo.wxss */
+.wxqyxx{
+height: 80rpx;
+width: 100%;
+line-height: 80rpx;
+font-size: 30rpx;
+}
+page{
+ background: #f0f0f0;
+}
+.wxqyxx text{
+ margin-left: 30rpx;
+}
+.info{
+ background: white;
+ width: 100%;
+}
+.list{
+ height: 80rpx;
+ width: 90%;
+ margin-left: 5%;
+ border-bottom: 1rpx solid #e3e3e3;
+ line-height: 80rpx;
+}
+.list text:nth-child(1){
+ font-size: 30rpx;
+ color: #a2a2a2;
+}
+.list text:nth-child(2){
+ font-size: 30rpx;
+ color: #a2a2a2;
+ margin-left: 60rpx;
+
+}
+.shebei{
+ background: white;
+ margin-bottom: 20rpx;
+}
+.item{
+ height: 80rpx;
+ width: 100%;
+ line-height: 80rpx;
+ border-bottom: 1px dashed #e3e3e3;
+}
+.item text:nth-child(1){
+font-size: 35rpx;
+margin-left: 30rpx;
+}
+.item text:nth-child(2){
+font-size: 30rpx;
+margin-left: 20rpx;
+color: #4CAF50;
+font-weight: bold;
+float: right;
+margin-right: 20rpx;
+}
+.shebei_info{
+padding: 10rpx;
+color: #a2a2a2;
+}
+.shebei_img{
+ padding-bottom: 20rpx;
+}
+.shebei_img image{
+ width: 20%;
+ height: 160rpx;
+ margin-left:4%;
+}
+.shebei_info text{
+ margin-left: 20rpx;
+}
+.tousu{
+ /* background: #4CAF50; */
+ width: 30%;
+ height: 80rpx;
+ line-height: 80rpx;
+ font-size: 35rpx;
+ color: blue;
+ margin-bottom: 30rpx;
+ text-decoration: underline;
+}
+#tousu{
+ width: 100%;
+ text-align: center;
+ font-size: 20rpx;
+}

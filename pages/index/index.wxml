@@ -1,0 +1,99 @@
+<view class="body">
+  <!-- 顶部tab切换 -->
+  <!-- 待处理（可申报）、维修中 -->
+  <view class="nav bc_white">
+    <view class="{{selected?'red':'default'}} title" bindtap="selected">
+      <view>待派工</view>
+    </view>
+    <view class="{{selected2?'red':'default'}} title" bindtap="selected2">
+      <view>待确认</view>
+    </view>
+    <view class="{{selected3?'red':'default'}} title" bindtap="selected3">
+      <view>待评价</view>
+    </view>
+    <view class="{{selected4?'red':'default'}} title" bindtap="selected4">
+      <view>已完成</view>
+    </view>
+  </view>
+</view>
+<!-- 内容区域 -->
+<view class="{{selected?'show':'hidden'}}">
+  <view class="introduce" wx:for="{{dpgList}}" >
+    <view class='list'  bindlongtap='del' data-orderId = "{{item.orderId}}">
+      <view class='name'>
+        <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId = "{{item.orderId}}">{{item.maintainStatus}}</text>
+      </view>
+      <view class='info'>
+        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
+        <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
+        <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
+        <text class='dj'>类型：<text style='font-weight:bold;color:#4CAF50'>{{item.orderType}}</text></text>
+      </view>
+    </view>
+  </view>
+  <button class='shenbao' bindtap='shenbao'>立即申报</button>
+
+</view>
+
+<view class="{{selected2?'show':'hidden'}}">
+  <!--introduce   介绍-->
+ <view class="introduce" wx:for="{{dqrList}}" >
+    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+      <view class='name'>
+        <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>
+      </view>
+      <view class='info'>
+        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
+        <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
+        <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
+        <text class='dj'>类型：<text style='font-weight:bold;color:#4CAF50'>{{item.orderType}}</text></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="{{selected3?'show':'hidden'}}">
+  <!--introduce   介绍-->
+ <view class="introduce" wx:for="{{dpjList}}" >
+    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+      <view class='name'>
+        <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' catchtap='pingjia'>{{item.maintainStatus}}</text>
+      </view>
+      <view class='info'>
+        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
+        <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
+        <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
+        <text class='dj'>类型：<text style='font-weight:bold;color:#4CAF50'>{{item.orderType}}</text></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="{{selected4?'show':'hidden'}}">
+  <!--introduce   介绍-->
+ <view class="introduce" wx:for="{{ywcList}}" >
+    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+      <view class='name'>
+        <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>
+      </view>
+      <view class='info'>
+        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
+        <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
+        <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
+        <text class='dj'>类型：<text style='font-weight:bold;color:#4CAF50'>{{item.orderType}}</text></text>
+      </view>
+    </view>
+  </view>
+</view>

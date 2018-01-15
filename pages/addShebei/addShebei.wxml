@@ -1,0 +1,35 @@
+<view class="container">
+<view class='item'>
+ <!-- <text>设备名称</text> -->
+ <picker bindchange="bindPickerChange" value="{{index}}" range="{{sbList}}" range-key="title">
+    <view class="picker" style='color: #333'>
+        设备名称 <text style='margin-left:50rpx;'>{{sbList[index].title}}</text>
+    </view>
+  </picker>
+</view>
+<view class='item'>
+ <text>规格型号</text>
+ <input placeholder='*请输入规格型号' bindinput='ggxh'></input>
+</view>
+<view class='item'>
+ <text>生产厂家</text>
+ <input placeholder='*请输入生产厂家' bindinput='sccj'></input>
+</view>
+<view class='item'>
+ <text>出厂编码</text>
+ <input placeholder='*请输入出厂编码' bindinput='ccbm'></input>
+</view>
+<view class='item'>
+ <!-- <text>出厂时间</text> -->
+   <picker mode="date" value="{{time}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker" style='color: #333'>
+        出厂时间 <text style='margin-left:50rpx;'>{{date}}</text>
+    </view>
+  </picker>
+</view>
+<!-- <view class='item'>
+ <text>等级</text>
+ <input placeholder='*请输入等级' type='number' bindinput='dj'></input>
+</view> -->
+<button class='register' bindtap='add'>立即添加</button>
+</view>

@@ -1,0 +1,136 @@
+<view class='container'>
+ <view class='title'>
+  聚良企业合同管理
+ </view>
+ <text style='margin-left:30rpx;'>合同编号：<text style='color:#4CAF50;font-weight:bold'>JL41648964</text></text>
+ <view class='content'>
+  <view class='jia'>
+   <text> 甲方信息</text>
+  </view>
+  <view class='info'>
+   <view class='list'>
+    <text>企业名称</text>
+    <text>西安久诺网络技术有限公司</text>
+   </view>
+   <view class='list'>
+    <text>企业地址</text>
+    <text>陕西西安市西安欧亚学院</text>
+   </view>
+   <view class='list'>
+    <text>联系人</text>
+    <text style='margin-left:85rpx;'>代江平</text>
+   </view>
+   <view class='list'>
+    <text>联系电话</text>
+    <text style='color:blue; text-decoration: underline' bindtap='callPhone'>17868802602</text>
+   </view>
+  </view>
+ </view>
+ <view class='jia' style='margin-top:-1rpx;'>
+  <text> 乙方信息</text>
+ </view>
+ <view class='list'>
+  <text>企业名称</text>
+  <text>聚良机电有限公司</text>
+ </view>
+ <view class='list'>
+  <text>企业地址</text>
+  <text>陕西西安市西安欧亚学院</text>
+ </view>
+ <view class='list'>
+  <text>联系人</text>
+  <text style='margin-left:85rpx;'>代江平</text>
+ </view>
+ <view class='list'>
+  <text>联系电话</text>
+  <text style='color:blue; text-decoration: underline' bindtap='callPhone'>17868804701</text>
+ </view>
+ <view class='jia' style='margin-top:-1rpx;'>
+  <text> 金额信息<text style='color:red;margin-left:40rpx;'>已下的数量批次之间用“/”分开</text></text>
+ </view>
+ <view class='list'>
+  <text>合同金额</text>
+  <text>500元</text>
+ </view>
+ <view class='list'>
+  <text>开票金额</text>
+  <text>202元/222元</text>
+ </view>
+ <view class='list'>
+  <text>维保数量</text>
+  <text>10/20</text>
+ </view>
+ <view class='list'>
+  <text>售后数量</text>
+  <text>10/30</text>
+ </view>
+ <view class='list'>
+  <text>已维保数量</text>
+  <text>2/10</text>
+ </view>
+ <view class='list'>
+  <text>未完成维保</text>
+  <text>10/20</text>
+ </view>
+ <view class='list'>
+  <text>已完成售后</text>
+  <text>10/20</text>
+ </view>
+ <view class='list'>
+  <text>未完成售后</text> 
+  <text>10/22</text>
+ </view>
+
+ <view class='jia' style='margin-top:-1rpx;'>
+  <text>日期</text>
+ </view>
+ <view class='list'>
+  <text>合同日期</text>
+  <text>2014-10-18至2017-10-18</text>
+ </view>
+
+ <view class='list'>
+  <text>维保日期</text>
+  <text>2014-10-18</text>
+ </view>
+
+ <view class='jia' style='margin-top:-1rpx;'>
+  <text> 设备清单</text>
+ </view>
+
+ <view class='item'>
+  <view>
+   <text class='sb_name'>设备名称：<text class='blod'> 电视机</text></text>
+   <text class='sb_code'>出厂编码：<text class='blod'> 465767GBH68</text></text>
+   <text class='sb_cj'>生产厂家：<text class='blod'> 陕西省电视机有限公司</text></text>
+   <text class='sb_xh'>规格型号：<text class='blod'> TCL</text></text>
+  </view>
+ </view>
+
+ <view class='item'>
+  <view>
+   <text class='sb_name'>设备名称：<text class='blod'> 电视机</text></text>
+   <text class='sb_code'>出厂编码：<text class='blod'> 465767GBH68</text></text>
+   <text class='sb_cj'>生产厂家：<text class='blod'> 陕西省电视机有限公司</text></text>
+   <text class='sb_xh'>规格型号：<text class='blod'> TCL</text></text>
+  </view>
+ </view>
+
+ <view class='item'>
+  <view>
+   <text class='sb_name'>设备名称：<text class='blod'> 电视机</text></text>
+   <text class='sb_code'>出厂编码：<text class='blod'> 465767GBH68</text></text>
+   <text class='sb_cj'>生产厂家：<text class='blod'> 陕西省电视机有限公司</text></text>
+   <text class='sb_xh'>规格型号：<text class='blod'> TCL</text></text>
+  </view>
+ </view>
+
+ <view class='item'>
+  <view>
+   <text class='sb_name'>设备名称：<text class='blod'> 电视机</text></text>
+   <text class='sb_code'>出厂编码：<text class='blod'> 465767GBH68</text></text>
+   <text class='sb_cj'>生产厂家：<text class='blod'> 陕西省电视机有限公司</text></text>
+   <text class='sb_xh'>规格型号：<text class='blod'> TCL</text></text>
+  </view>
+ </view>
+</view>

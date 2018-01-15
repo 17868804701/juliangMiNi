@@ -1,0 +1,92 @@
+<view class='container'>
+  <view class='wxqyxx'>
+    <text>企业信息</text>
+  </view>
+  <!-- 企业信息开始 -->
+  <view class='info'>
+    <view class='list'>
+      <text>企业名称</text>
+      <text>{{companyName}}</text>
+    </view>
+    <view class='list'>
+      <text>企业税号</text>
+      <text style='font-weight:bold;color:#4CAF50'>{{enterpriseNumber}}</text>
+    </view>
+    <view class='list'>
+      <text>企业地址</text>
+      <text>{{companyAddress}}</text>
+    </view>
+    <view class='list'>
+      <text>联系人</text>
+      <text style='margin-left:85rpx;'>{{linkman}}</text>
+    </view>
+    <view class='list' style='border:0'>
+      <text>联系电话</text>
+      <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{iphone}}</text>
+    </view>
+  </view>
+  <!-- 企业信息完 -->
+  <!-- 维修工信息 -->
+  <view class='wxqyxx'>
+    <text>维修工信信息</text>
+  </view>
+  <view class='info'>
+    <view class='list'>
+      <text>联系电话</text>
+      <text style='color:blue; text-decoration: underline' bindtap='callPhone'>17868802602</text>
+    </view>
+    <view class='list' style='border:0'>
+      <text>维修金额</text>
+      <text style='color:#4CAF50;font-weight:bold' bindtap='callPhone'>￥200.00元</text>
+    </view>
+  </view>
+  <view class='wxqyxx'>
+    <text>维修设备</text>
+  </view>
+  <view class='shebei' wx:for="{{orderList}}">
+    <view class='item'>
+      <text style='font-size:30rpx;'>{{item.equipmentName}}</text>
+      <text style='font-size:30rpx;'>NO：{{item.factoryCode}}</text>
+    </view>
+    <!-- 自己设备描述 -->
+    <view class='shebei_info'>
+      <text>设备描述：{{item.errorDescription}}</text>
+    </view>
+    <view class='shebei_img'>
+      <image src="{{url+item.errorImage1}}"></image>
+      <image src='{{url+item.errorImage2}}'></image>
+      <image src='{{url+item.errorImage3}}'></image>
+      <image src='{{url+item.errorImage4}}'></image>
+      <image src='{{url+item.errorImage5}}'></image>
+    </view>
+    <!-- 自己设备描述完 -->
+    <!-- 工程师描述 -->
+    <view class='shebei_info' hidden='{{maintain_status=="待派工"}}'>
+      <text>工程师描述：{{item.workErrorDescription}}</text>
+    </view>
+    <view class='shebei_img' hidden='{{maintain_status=="待派工"}}'>
+      <image src='{{url+item.workErrorImage1}}'></image>
+      <image src='{{url+item.workErrorImage2}}'></image>
+      <image src='{{url+item.workErrorImage3}}'></image>
+      <image src='{{url+item.workErrorImage4}}'></image>
+      <image src='{{url+item.workErrorImage5}}'></image>
+    </view>
+    <!-- 工程师描述完 -->
+  </view>
+  <!-- 工作照 -->
+  <!-- <view class='shebei'>
+    <view class='gongzuozhao'>
+      <view class='shebei_info'>
+        <text>工作照</text>
+      </view>
+      <view class='shebei_img'>
+        <image src='../img/head.jpg'></image>
+        <image src='../img/head.jpg'></image>
+      </view>
+    </view>
+  </view> -->
+  <!-- 工作照完 -->
+  <view id='tousu'>
+    <text class='tousu' bindtap='tousu'>投诉</text>
+  </view>
+</view>

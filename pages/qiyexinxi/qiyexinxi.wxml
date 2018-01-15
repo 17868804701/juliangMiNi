@@ -1,0 +1,16 @@
+<view class="container">
+<view class='item'>
+ <text>联系人</text>
+ <input placeholder='黄森' value='{{lxr}}' bindinput='lxr'></input>
+</view>
+<view class='item'>
+ <text>联系地址</text>
+ <input placeholder='西安欧亚学院' value='{{lxdz}}' bindinput='lxdz'></input>
+</view>
+<view class='item'>
+ <text>联系电话</text>
+ <input placeholder='17868804701' value='{{lxdh}}' bindinput='lxdh'></input>
+</view>
+<text class='tip'>*可以对企业的基本信息进行修改</text>
+<button class='update' bindtap='update'>提交</button>
+</view>

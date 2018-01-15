@@ -1,0 +1,23 @@
+
+
+<view class="pingjia">
+  <text class="star" bindtap="click_1">
+  {{star1}}
+  </text>
+    <text class="star" bindtap="click_2">
+  {{star2}}
+  </text>
+    <text class="star" bindtap="click_3">
+  {{star3}}
+  </text>
+    <text class="star" bindtap="click_4">
+  {{star4}}
+  </text>
+    <text class="star" bindtap="click_5">
+  {{star5}}
+  </text>
+</view>
+<view>
+<textarea placeholder='请输入评价内容'></textarea>
+<button class='pj'>立即评价</button>
+</view>

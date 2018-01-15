@@ -1,0 +1,7 @@
+
+<view class='tip'>
+<text>对我们有什么不满都可以提出哦！</text>
+</view>
+
+<textarea placeholder='请输入投诉内容' bindinput='content'></textarea>
+<button class='pj' bindtap='tousu'>提交</button>

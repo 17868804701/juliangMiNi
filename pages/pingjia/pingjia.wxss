@@ -1,0 +1,38 @@
+page{
+  font-size: 30rpx;
+  /* font-weight: bold; */
+  color: black;
+  background-color:white;
+}
+.pingjia{
+display:flex;
+ flex-direction:row;
+ justify-content: center;
+ align-items: center;
+ margin-top:100px;
+ background-color: white;
+ font-size: 40rpx;
+}
+.star{
+  color: #4CAF50;
+  font-size: 60rpx;
+  margin-left: 5px;
+}
+textarea{
+ width: 80%;
+ border: 1rpx solid gainsboro;
+ margin-left: 7%;
+ padding: 20rpx;
+ border-radius: 10rpx;
+ height: 200rpx;
+ margin-top: 100rpx;
+}
+.pj{
+ width: 85%;
+ background: #4CAF50;
+ color: white;
+ line-height: 80rpx;
+ height: 80rpx;
+ font-size: 30rpx;
+ margin-top: 40rpx;
+}

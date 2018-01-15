@@ -1,0 +1,17 @@
+<view class="container">
+  <view class='user'>
+    <image src='../img/user.png' class='user_icon'></image>
+    <input placeholder='用户名/税号' type='number' bindinput='username'></input>
+  </view>
+  <view class='password'>
+    <image src='../img/lock.png' class='pwd_icon'></image>
+    <input placeholder='密码' type='password' bindinput='password'></input>
+  </view>
+  <view class='login'>
+    <button class='login_btn' bindtap='login' bindtap='login'>登录</button>
+  </view>
+  <view class='tip'>
+    <text bindtap='register'>用户注册</text> |
+    <text>用户须知</text>
+  </view>
+</view>

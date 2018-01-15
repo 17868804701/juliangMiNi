@@ -1,0 +1,15 @@
+<view class="container">
+  <view class='item'>
+    <text>原密码</text>
+    <input placeholder='*请输入原密码' bindinput='oldPwd'></input>
+  </view>
+  <view class='item'>
+    <text>新密码</text>
+    <input placeholder='*请输入新密码' bindinput='newPwd' type='password'></input>
+  </view>
+  <view class='item'>
+    <text>确认密码</text>
+    <input placeholder='*请再次输入密码' bindinput='okNewPwd' type='password'></input>
+  </view>
+  <button class='update' bindtap='upPwd'>提交</button>
+</view>

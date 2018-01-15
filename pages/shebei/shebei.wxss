@@ -1,0 +1,60 @@
+/* pages/shebei/shebei.wxss */
+.list{
+ width: 92%;
+ border: 1rpx solid ghostwhite;
+ height: 240rpx;
+ border-radius: 10rpx;
+ margin-left: 4%;
+ margin-top: 20rpx;
+ box-shadow: 2px 2px 20px #e1e1e1;
+}
+.name{
+width: 100%;
+height: 75rpx;
+border-bottom: 1rpx dashed gainsboro;
+font-size: 30rpx;
+line-height: 75rpx;
+}
+.name text{
+ color: #4CAF50;
+  font-weight: bold; 
+ margin-left: 20rpx;
+}
+.info text{
+font-size: 25rpx;
+}
+.ggxh{
+ position: absolute;
+ margin-top: 10rpx;
+ margin-left: 20rpx;
+}
+.sccj{
+ position: absolute;
+ margin-top: 110rpx;
+ margin-left: 20rpx;
+}
+.ccbm{
+ position: absolute;
+ margin-top: 60rpx;
+ margin-left: 20rpx;
+}
+.ccsj{
+ position: absolute;
+ margin-top: 60rpx;
+ margin-left: 400rpx;
+}
+.dj{
+ position: absolute;
+ margin-left:400rpx;
+ margin-top: 10rpx;
+}
+.add_shebei{
+ background: #4CAF50;
+ height: 80rpx;
+ line-height: 80rpx;
+ color: white;
+ font-size: 30rpx;
+ width: 75%;
+ margin-top: 40rpx;
+ margin-bottom: 40rpx;
+}

@@ -1,0 +1,32 @@
+<view class="container">
+  <view class='head'>
+    <image src='../img/qiye.png' id='head'></image>
+    <text>{{name}}</text>
+    <!-- <image src='../img/right.png' class='right'></image> -->
+  </view>
+
+  <view class='item'>
+    <image src='../img/sh.png' class='icon'></image>
+    <text>企业税号：<text style='color:#4CAF50;font-weight:bold'>{{num}}</text>
+    </text>
+  </view>
+  <view class='item' bindtap='qiyexinxi'>
+    <image src='../img/qiyexinxi.png' class='xgmm'></image>
+    <text>企业信息</text>
+    <image src='../img/right.png' class='right1'></image>
+  </view>
+  <view class='item' bindtap='upPwd'>
+    <image src='../img/mmxg.png' class='xgmm'></image>
+    <text>修改密码</text>
+    <image src='../img/right.png' class='right1'></image>
+  </view>
+  <view class='item' bindtap='call'>
+    <image src='../img/ht1.png' class='xgmm'></image>
+    <text>联系我们</text>
+    <image src='../img/right.png' class='right1'></image>
+  </view>
+
+
+
+  <button class='btn_logout' bindtap='btn_logout'>退出登录</button>
+</view>

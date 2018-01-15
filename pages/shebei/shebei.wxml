@@ -1,0 +1,18 @@
+<view class='container'>
+<!-- 列表开始 -->
+ <view class='list' wx:for="{{shebeiList}}">
+  <view class='name'>
+   <text>{{item.equipmentName}}</text>
+  </view>
+  <view class='info'>
+   <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>{{item.equipmentModel}}</text></text>
+   <text class='sccj'>生产厂家：<text style='font-weight:bold;color:#4CAF50'>{{item.manufactureFactory}}</text></text>
+   <text class='ccbm'>出厂编码：<text style='font-weight:bold;color:#4CAF50'>{{item.factoryCode}}</text></text>
+   <text class='ccsj'>出厂时间：<text style='font-weight:bold;color:#4CAF50'>{{item.deliveryDate}}</text></text>
+   <text class='dj'>等级：<text style='font-weight:bold;color:#4CAF50'>2</text></text>
+  </view>
+ </view>
+<!-- 列表结束 -->
+
+<button class='add_shebei' bindtap='add'>添加设备</button>
+</view>

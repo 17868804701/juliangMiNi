@@ -1,0 +1,36 @@
+/* pages/login/login.wxss */
+ .container input{
+ border-bottom: 1rpx solid whitesmoke;
+ width: 87%;
+  padding-left: 60rpx; 
+ height: 80rpx;
+ margin-left: 17rpx;
+} 
+.user{
+margin-top: 50rpx;
+}
+.password{
+ margin-top: 20rpx;
+}
+.user_icon,.pwd_icon{
+ position: absolute;
+ height: 40rpx;
+ width: 40rpx;
+ margin-top: 18rpx;
+ margin-left: 20rpx;
+}
+.login_btn{
+ width: 96%;
+ height: 80rpx;
+ line-height: 80rpx;
+ font-size: 30rpx;
+ background: #4CAF50;
+ border: 0;
+ color: white;
+ margin-top: 50rpx;
+}
+.tip{
+ text-align: center;
+ margin-top: 40rpx;
+ color:#018fd1;
+}
