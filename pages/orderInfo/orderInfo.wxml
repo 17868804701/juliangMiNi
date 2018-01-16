@@ -27,7 +27,7 @@
   </view>
   <!-- 企业信息完 -->
   <!-- 维修工信息 -->
-  <view class='wxqyxx'>
+  <!-- <view class='wxqyxx'>
     <text>维修工信信息</text>
   </view>
   <view class='info'>
@@ -39,7 +39,7 @@
       <text>维修金额</text>
       <text style='color:#4CAF50;font-weight:bold' bindtap='callPhone'>￥200.00元</text>
     </view>
-  </view>
+  </view> -->
   <view class='wxqyxx'>
     <text>维修设备</text>
   </view>

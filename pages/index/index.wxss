@@ -114,4 +114,10 @@ font-size: 25rpx;
   margin-top: 40rpx;
   font-size: 30rpx;
 }
-
+.tip_error{
+  color: #808080;
+  margin-left: 34%;
+  position: absolute;
+  font-size: 25rpx;
+  margin-top: 100rpx
+}

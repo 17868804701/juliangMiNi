@@ -10,11 +10,12 @@
    /* border: 1px solid rebeccapurple;   */
  height: 80rpx;
  margin-top: 12rpx;
+ font-size: 25rpx;
  margin-left: 23%;
 }
 .item text{
  position: absolute;
- font-size: 30rpx;
+ font-size: 25rpx;
  margin-left: 23rpx;
  color: #333;
 }
@@ -22,7 +23,7 @@
  height: 80rpx;
  line-height: 80rpx;
  border: 0;
- font-size: 30rpx;
+ font-size:25rpx;
  background: #4CAF50;
  color: white;
  margin-top: 45rpx;

@@ -33,3 +33,10 @@
   font-size: 25rpx;
   color: #333;
 }
+.tip_error{
+width: 100%;
+height: 200rpx;
+text-align: center;
+color: #808080;
+line-height: 200rpx;
+}

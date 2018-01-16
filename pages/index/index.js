@@ -71,6 +71,7 @@ Page({
             method: 'POST',
             header: {
               "Content-Type": "application/json",
+              "Cookie": getApp().data.jsessionid 
             },
             success: function (res) {
               console.log(res.data);
@@ -78,13 +79,13 @@ Page({
                   wx.showToast({
                     title: '删除成功',
                   })
+                  wx.switchTab({
+                    url: '../index/index',
+                  })
               }else{
                 wx.showModal({
                   title: '提示',
                   content: '删除订单失败',
-                })
-                wx.switchTab({
-                  url: '../index/index',
                 })
               }
             },
@@ -121,10 +122,10 @@ Page({
   * 生命周期函数--监听页面加载
   */
   onLoad: function (options) {
-    wx.showModal({
-      title: '温馨提示',
-      content: '待派工的订单长按可以删除',
-    })
+    // wx.showModal({
+    //   title: '温馨提示',
+    //   content: '待派工的订单长按可以删除',
+    // })
   },
   onShow: function () {
     var that = this;
@@ -140,12 +141,13 @@ Page({
       method: 'POST',
       header: {
         "Content-Type": "application/json",
-        "Cookie": "__guid=111872281.847185174222103300.1512611359380.093; loginkey=1; Hm_lvt_97c875c5e5d9f579abee666c38327aee=1512038846,1512611830; _ga=GA1.1.1074087333.1491528090; JSESSIONID=" + getApp().data.jsessionid + "; sid=51bbc39f-2528-4ee4-bd7b-ff4ce5433d59; monitor_count=45"
+        "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
         console.log(res.data.data);
         that.setData({
-          dpgList: res.data.data
+          dpgList: res.data.data,
+          dpgListLength: res.data.data.length
         })
       },
       fail: function (res) {
@@ -165,12 +167,14 @@ Page({
         },
         method: 'POST',
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid 
         },
         success: function (res) {
           console.log(res.data.data);
           that.setData({
-            dqrList: res.data.data
+            dqrList: res.data.data,
+            dqrListLength: res.data.data.length
           })
         },
         fail: function (res) {
@@ -190,12 +194,14 @@ Page({
         },
         method: 'POST',
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid 
         },
         success: function (res) {
           console.log(res.data.data);
           that.setData({
-            dpjList: res.data.data
+            dpjList: res.data.data,
+            dpjListLength: res.data.data.length
           })
         },
         fail: function (res) {
@@ -215,12 +221,14 @@ Page({
         },
         method: 'POST',
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid 
         },
         success: function (res) {
           console.log(res.data.data);
           that.setData({
-            ywcList: res.data.data
+            ywcList: res.data.data,
+            ywcListLength: res.data.data.length,
           })
         },
         fail: function (res) {

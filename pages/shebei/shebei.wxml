@@ -1,6 +1,9 @@
 <view class='container'>
 <!-- 列表开始 -->
- <view class='list' wx:for="{{shebeiList}}">
+<view wx:if="{{shebeiListLength==0}}" class='tip_error'>
+---目前还没有添加设备---
+</view>
+ <view class='list' wx:for="{{shebeiList}}" wx:if="{{shebeiListLength!=0}}">
   <view class='name'>
    <text>{{item.equipmentName}}</text>
   </view>

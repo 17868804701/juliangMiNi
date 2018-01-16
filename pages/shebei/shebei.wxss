@@ -58,3 +58,10 @@ font-size: 25rpx;
  margin-top: 40rpx;
  margin-bottom: 40rpx;
 }
+.tip_error{
+width: 100%;
+height: 200rpx;
+text-align: center;
+color: #808080;
+line-height: 200rpx;
+}

@@ -91,7 +91,8 @@ Page({
         },
         method: 'POST',
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid 
         },
         success: function (res) {
           console.log(res.data);
@@ -99,6 +100,14 @@ Page({
               wx.showToast({
                 title: '注册成功',
               })
+              wx.redirectTo({
+                url: '../login/login',
+              })
+          }else{
+            wx.showModal({
+              title: '提示',
+              content: '注册失败',
+            })
           }
         },
         fail: function (res) {

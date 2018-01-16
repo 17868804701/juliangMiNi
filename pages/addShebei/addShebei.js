@@ -70,13 +70,17 @@ Page({
         },
         method: 'POST',
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid 
         },
         success: function (res) {
           console.log(res.data);
           if (res.data.success == true) {
             wx.showToast({
               title: '添加成功',
+            })
+            wx.navigateBack({
+              url: "../shebei/shebei"
             })
           } else {
             wx.showModal({
@@ -111,7 +115,8 @@ Page({
       data: {},
       method: 'POST',
       header: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
         console.log(res.data.sysDictionaries);

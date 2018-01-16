@@ -89,13 +89,17 @@ Page({
       },
       method: 'POST',
       header: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
         console.log(res.data)
         if(res.data.success==true){
             wx.showToast({
               title: '修改信息成功',
+            })
+            wx.navigateBack({
+              url:"../qiyezhongxin/qiyezhongxin"
             })
         }else{
           wx.showModal({

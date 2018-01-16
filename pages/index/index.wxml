@@ -18,11 +18,14 @@
 </view>
 <!-- 内容区域 -->
 <view class="{{selected?'show':'hidden'}}">
-  <view class="introduce" wx:for="{{dpgList}}" >
-    <view class='list'  bindlongtap='del' data-orderId = "{{item.orderId}}">
+  <view class="introduce" wx:if="{{dpgListLength==0}}">
+      <text class='tip_error'>---目前还没有订单---</text>
+  </view>
+  <view class="introduce" wx:for="{{dpgList}}" wx:if="{{dpgListLength!=0}}">
+    <view class='list' bindlongtap='del' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
-        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId = "{{item.orderId}}">{{item.maintainStatus}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId="{{item.orderId}}">{{item.maintainStatus}}</text>
       </view>
       <view class='info'>
         <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
@@ -39,8 +42,11 @@
 
 <view class="{{selected2?'show':'hidden'}}">
   <!--introduce   介绍-->
- <view class="introduce" wx:for="{{dqrList}}" >
-    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+  <view class="introduce" wx:if="{{dqrListLength==0}}">
+      <text class='tip_error'>---目前还没有订单---</text>
+  </view>
+  <view class="introduce" wx:for="{{dqrList}}" wx:if="{{dqrListLength!=0}}">
+    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>
@@ -54,14 +60,19 @@
       </view>
     </view>
   </view>
+
+
 </view>
 
 
 
 <view class="{{selected3?'show':'hidden'}}">
   <!--introduce   介绍-->
- <view class="introduce" wx:for="{{dpjList}}" >
-    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+    <view class="introduce" wx:if="{{dpjListLength==0}}">
+     <text class='tip_error'>---目前还没有订单---</text>
+    </view>
+  <view class="introduce" wx:for="{{dpjList}}" wx:if="{{dpjListLength!=0}}">
+    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' catchtap='pingjia'>{{item.maintainStatus}}</text>
@@ -81,8 +92,11 @@
 
 <view class="{{selected4?'show':'hidden'}}">
   <!--introduce   介绍-->
- <view class="introduce" wx:for="{{ywcList}}" >
-    <view class='list' bindtap='orderInfo' data-orderId = "{{item.orderId}}">
+      <view class="introduce" wx:if="{{ywcListLength==0}}">
+      <text class='tip_error'>---目前还没有订单---</text>
+    </view>
+  <view class="introduce" wx:for="{{ywcList}}" wx:if="{{ywcListLength!=0}}">
+    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>

@@ -34,13 +34,23 @@ Page({
       },
       method: 'POST',
       header: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
         console.log(res.data.contractList);
-        that.setData({
-          htList: res.data.contractList
-        })
+        if(res.data.success!=true){
+            wx.showModal({
+              title: '提示',
+              content: '网络异常，请检查你的网络',
+            })
+        }else{
+          that.setData({
+            htList: res.data.contractList,
+            htListLength: res.data.contractList.length
+          })
+        }
+    
       },
       fail: function (res) {
         // fail

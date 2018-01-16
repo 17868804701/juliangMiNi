@@ -32,7 +32,8 @@ Page({
       data: { "qyId": getApp().data.qyId },
       method: 'POST',
       header: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
         console.log(res.data);
@@ -43,7 +44,8 @@ Page({
           })
         } else {
           that.setData({
-            shebeiList: res.data.data
+            shebeiList: res.data.data,
+            shebeiListLength: res.data.data.length
           })
         }
       },

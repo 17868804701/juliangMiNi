@@ -1,11 +1,12 @@
 //app.js
 App({
   data:{
-    // url:"http://10.20.0.75:8888/",
-     url:"http://118.89.49.82/juliangjidian",
+    url:"http://10.20.0.75:8888/",
+    //  url:"http://118.89.49.82/juliangjidian",
     qyId:"",
     companyName:"",
-    jsessionid:""
+    jsessionid:"",
+    iphone:""
   },
   onLaunch: function () {
     // 展示本地存储能力

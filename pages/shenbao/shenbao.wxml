@@ -1,41 +1,37 @@
 <view class="container">
   <form bindsubmit="bindSaveTap">
-    <!-- <view class='item'>
- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker" style='color: #333'>
-        申报类型 <text style='margin-left:50rpx;'>{{array[index]}}</text>
+    <view class='item'>
+      <picker bindchange="bindPickerChange_type" value="{{index}}" range="{{array}}">
+        <view class="picker" style='color: #333'>
+          申报类型
+          <text style='margin-left:50rpx;'>{{array[index]}}</text>
+        </view>
+      </picker>
     </view>
-  </picker>
-</view>  -->
     <view class='item'>
       <!-- <text>设备名称</text> -->
       <picker bindchange="bindPickerChange1" value="{{sbName}}" range="{{sbList}}" range-key="equipmentName">
-        <view class="picker" style='color: #333'>
+        <view class="picker" style='color: #333;font-size:25rpx;'>
           设备名称
-          <text style='margin-left:50rpx;'>{{sbList[sbName].equipmentName}}</text>
+          <text style='margin-left:60rpx;'>{{sbList[sbName].equipmentName}}</text>
         </view>
       </picker>
     </view>
     <view class='item'>
       <text>规格型号</text>
-      <input placeholder='*请输入规格型号'></input>
+      <input placeholder='*请输入规格型号' value='{{ggxh}}' disabled='true' bindinput='ggxh'></input>
     </view>
     <view class='item'>
       <text>生产厂家</text>
-      <input placeholder='*请输入生产厂家'></input>
+      <input placeholder='*请输入生产厂家' value='{{sccj}}' disabled='true' bindinput='sccj'></input>
     </view>
     <view class='item'>
       <text>出厂编码</text>
-      <input placeholder='*请输入出厂编码'></input>
+      <input placeholder='*请输入出厂编码' value='{{ccbm}}' disabled='true' bindinput='ccbm'></input>
     </view>
     <view class='item'>
-      <!-- <text>出厂时间</text> -->
-      <picker mode="date" value="{{time}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-        <view class="picker" style='color: #333'>
-          出厂时间
-          <text style='margin-left:50rpx;'>{{date}}</text>
-        </view>
-      </picker>
+      <text>出厂时间</text>
+      <input placeholder='*请输入出厂时间' value='{{ccsj}}' disabled='true' bindinput='ccsj'></input>
     </view>
     <!-- <view class='item'>
  <text>等级</text>
@@ -44,13 +40,13 @@
     <view class='desc'>
       <text> 添加设备描述 </text>
     </view>
-    <textarea class='desc_info' placeholder='请添加设备描述,最多200字' maxlength='200'></textarea>
-    <image src='{{item}}' style='width:20%;height:160rpx; margin-left:4%;margin-top:20rpx;' wx:for="{{imgList}}"></image>
+    <textarea class='desc_info' placeholder='请添加设备描述,最多200字' maxlength='200' bindinput='desc'></textarea>
+    <image src='{{url+item}}' style='width:20%;height:160rpx; margin-left:4%;margin-top:20rpx;' wx:for="{{img}}"></image>
     <image src='../img/upload.png' class='upload_icon' bindtap='up'></image>
     <!-- <button >上传</button> -->
     <view class='btn'>
-      <button class='register' bindtap='bc'>保存</button>
-      <button class='register' bindlongtap='jxtj'>继续添加</button>
+      <button class='register' bindtap='bc'>提交</button>
+      <button class='register' bindtap='jxtj'>继续添加</button>
     </view>
   </form>
 </view>

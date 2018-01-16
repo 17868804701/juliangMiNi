@@ -1,4 +1,7 @@
 <view class='container'>
+  <view wx:if="{{htListLength==0}}" class='tip_error'>
+  ---目前还没有添加设备---
+  </view>
   <view class='list' bindtap='htManger' wx:for="{{htList}}" data->
     <image src='../img/ht_icon.png'></image>
     <text class='name'>{{item.firstPartyCompanyName}}</text>

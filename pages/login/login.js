@@ -95,7 +95,9 @@ Page({
           console.log(res.data);
           if (res.data.success==true){
               getApp().data.qyId = res.data.enterprise.qyId;
-              getApp().data.jsessionid = res.data.jsessionid;
+              getApp().data.iphone = res.data.enterprise.iphone;
+          
+              getApp().data.jsessionid ="sid="+res.data.jsessionid
               getApp().data.enterpriseNumber = res.data.enterprise.enterpriseNumber;
               getApp().data.companyName = res.data.enterprise.companyName;
               getApp().data.iphone = res.data.enterprise.iphone;
