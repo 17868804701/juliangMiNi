@@ -129,11 +129,11 @@ Page({
   },
   // 继续添加
   jxtj: function () {
-    this.data.SheBeiList.errorImage0 = this.data.img[0];
-    this.data.SheBeiList.errorImage1 = this.data.img[1];
-    this.data.SheBeiList.errorImage2 = this.data.img[2];
-    this.data.SheBeiList.errorImage3 = this.data.img[3];
-    this.data.SheBeiList.errorImage4 = this.data.img[4];
+    this.data.SheBeiList.errorImage1 = this.data.img[0];
+    this.data.SheBeiList.errorImage2 = this.data.img[1];
+    this.data.SheBeiList.errorImage3 = this.data.img[2];
+    this.data.SheBeiList.errorImage4 = this.data.img[3];
+    this.data.SheBeiList.errorImage5 = this.data.img[4];
     this.data.SheBeiList.errorDescription = this.data.desc;
     console.log(this.data.SheBeiList)
 
@@ -148,11 +148,11 @@ Page({
   },
   // 保存提交
   bc: function () {
-    this.data.SheBeiList.errorImage0 = this.data.img[0] || "";
-    this.data.SheBeiList.errorImage1 = this.data.img[1] || "";
-    this.data.SheBeiList.errorImage2 = this.data.img[2] || "";
-    this.data.SheBeiList.errorImage3 = this.data.img[3] || "";
-    this.data.SheBeiList.errorImage4 = this.data.img[4] || "";
+    this.data.SheBeiList.errorImage1 = this.data.img[0] || "";
+    this.data.SheBeiList.errorImage2 = this.data.img[1] || "";
+    this.data.SheBeiList.errorImage3 = this.data.img[2] || "";
+    this.data.SheBeiList.errorImage4 = this.data.img[3] || "";
+    this.data.SheBeiList.errorImage5 = this.data.img[4] || "";
     this.data.SheBeiList.errorDescription = this.data.desc;
     console.log(this.data.SheBeiList)
     var logs1 = wx.getStorageSync('logs1') || []

@@ -64,6 +64,58 @@ Page({
   onHide: function () {
   
   },
+  // del: function (e) {
+  //   // miniApps / order / deleteRepairOrder
+  //   console.log(e.currentTarget.dataset.id);
+  //   this.setData({
+  //     del_id: e.currentTarget.dataset.id
+  //   })
+  //   wx.showModal({
+  //     title: '删除',
+  //     content: '确定删除该设备嘛',
+  //     success: function (res) {
+  //       if (res.confirm) {
+  //         console.log('用户点击确定')
+  //         // 删除shebei
+  //         wx.request({
+  //           url: `${getApp().data.url}/miniApps/qysb/delEnterpriseEquipment`,
+  //           data: {
+  //             "orderId": e.currentTarget.dataset.id
+  //           },
+  //           method: 'POST',
+  //           header: {
+  //             "Content-Type": "application/json",
+  //             "Cookie": getApp().data.jsessionid
+  //           },
+  //           success: function (res) {
+  //             console.log(res.data);
+  //             if (res.data.success == true) {
+  //               wx.showToast({
+  //                 title: '删除成功',
+  //               })
+  //               wx.reLaunch({
+  //                 url: '../shebei/shebei',
+  //               })
+  //             } else {
+  //               wx.showModal({
+  //                 title: '提示',
+  //                 content: '删除失败',
+  //               })
+  //             }
+  //           },
+  //           fail: function (res) {
+  //             // fail
+  //           },
+  //           complete: function (res) {
+  //             // complete
+  //           }
+  //         })
+  //       } else {
+  //         console.log('取消')
+  //       }
+  //     }
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面卸载

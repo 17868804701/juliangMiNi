@@ -26,6 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
     var that = this;
     wx.request({
       url: `${getApp().data.url}/miniApps/contract/contractList`,
@@ -38,19 +39,11 @@ Page({
         "Cookie": getApp().data.jsessionid 
       },
       success: function (res) {
-        console.log(res.data.contractList);
-        if(res.data.success!=true){
-            wx.showModal({
-              title: '提示',
-              content: '网络异常，请检查你的网络',
-            })
-        }else{
+        console.log(res.data);
           that.setData({
             htList: res.data.contractList,
             htListLength: res.data.contractList.length
           })
-        }
-    
       },
       fail: function (res) {
         // fail
@@ -95,9 +88,13 @@ Page({
   onShareAppMessage: function () {
   
   },
-  htManger:function(){
+  htManger:function(e){
+    console.log(e.currentTarget.dataset.contractid);
+    this.setData({
+      contractId: e.currentTarget.dataset.contractid
+    })
     wx.navigateTo({
-      url: '../htManger/htManger',
+      url: '../htManger/htManger?contractId=' + this.data.contractId,
     })
   }
 })

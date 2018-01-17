@@ -106,18 +106,21 @@ font-size: 25rpx;
  margin-bottom: 40rpx;
 }
 .shenbao{
-  width: 60%;
-  height: 80rpx;
+  width: 50%;
+  height: 70rpx;
   background: #4CAF50;
   color: white;
-  line-height: 80rpx;
-  margin-top: 40rpx;
-  font-size: 30rpx;
+  position: absolute;
+  line-height: 70rpx;
+   margin-top: 40rpx; 
+   font-size: 25rpx; 
+   margin-left: 25%;
+
 }
 .tip_error{
   color: #808080;
   margin-left: 34%;
-  position: absolute;
+   position: absolute; 
   font-size: 25rpx;
-  margin-top: 100rpx
+   margin-top: 140rpx 
 }

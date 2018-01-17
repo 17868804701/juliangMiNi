@@ -71,18 +71,18 @@ Page({
             method: 'POST',
             header: {
               "Content-Type": "application/json",
-              "Cookie": getApp().data.jsessionid 
+              "Cookie": getApp().data.jsessionid
             },
             success: function (res) {
               console.log(res.data);
-              if(res.data.success==true){
-                  wx.showToast({
-                    title: '删除成功',
-                  })
-                  wx.switchTab({
-                    url: '../index/index',
-                  })
-              }else{
+              if (res.data.success == true) {
+                wx.showToast({
+                  title: '删除成功',
+                })
+                wx.reLaunch({
+                  url: '../index/index',
+                })
+              } else {
                 wx.showModal({
                   title: '提示',
                   content: '删除订单失败',
@@ -96,7 +96,7 @@ Page({
               // complete
             }
           })
-        }else{
+        } else {
           console.log('取消')
         }
       }
@@ -141,7 +141,7 @@ Page({
       method: 'POST',
       header: {
         "Content-Type": "application/json",
-        "Cookie": getApp().data.jsessionid 
+        "Cookie": getApp().data.jsessionid
       },
       success: function (res) {
         console.log(res.data.data);
@@ -168,7 +168,7 @@ Page({
         method: 'POST',
         header: {
           "Content-Type": "application/json",
-          "Cookie": getApp().data.jsessionid 
+          "Cookie": getApp().data.jsessionid
         },
         success: function (res) {
           console.log(res.data.data);
@@ -195,7 +195,7 @@ Page({
         method: 'POST',
         header: {
           "Content-Type": "application/json",
-          "Cookie": getApp().data.jsessionid 
+          "Cookie": getApp().data.jsessionid
         },
         success: function (res) {
           console.log(res.data.data);
@@ -222,7 +222,7 @@ Page({
         method: 'POST',
         header: {
           "Content-Type": "application/json",
-          "Cookie": getApp().data.jsessionid 
+          "Cookie": getApp().data.jsessionid
         },
         success: function (res) {
           console.log(res.data.data);

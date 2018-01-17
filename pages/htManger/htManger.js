@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.contractId)
+    this.setData({
+      contractId: options.contractId
+    })
   },
 
   /**
@@ -30,7 +33,7 @@ Page({
     wx.request({
       url: `${getApp().data.url}miniApps/contract/getContract`,
       data: {
-        "contractId": 31,
+        "contractId": this.data.contractId,
       },
       method: 'POST',
       header: {
@@ -39,6 +42,38 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
+        console.log(res.data.contract.ceds);
+        that.setData({
+          shebeiList: res.data.contract.ceds,
+          contract_type: res.data.contract.contract_type,//设备类型
+          first_party_company_name: res.data.contract.first_party_company_name,//甲方信息
+          first_party_enterprise_number: res.data.contract.first_party_enterprise_number,//甲方信息
+          first_party_iphone: res.data.contract.first_party_iphone,//甲方信息
+          first_party_linkman: res.data.contract.first_party_linkman,//甲方信息
+
+
+
+          second_party_iphone: res.data.contract.second_party_iphone,//乙
+          second_party_linkman: res.data.contract.second_party_linkman,//乙
+          secondt_party_company_name: res.data.contract.secondt_party_company_name,//乙
+          secondt_party_enterprise_number: res.data.contract.secondt_party_enterprise_number,//乙
+          first_party_linkman: res.data.contract.first_party_linkman,//乙
+
+
+
+
+          contract_closing_date: res.data.contract.contract_closing_date,//结束日期
+          contract_signing_date: res.data.contract.contract_signing_date,//开始日期
+
+
+          ticket_total_money: res.data.contract.ticket_total_money,//开票总金额
+
+
+
+
+
+
+        })
       },
       fail: function (res) {
         // fail

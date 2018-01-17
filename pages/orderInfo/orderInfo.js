@@ -104,7 +104,7 @@ Page({
   // 打电话
   callPhone: function () {
     wx.makePhoneCall({
-      phoneNumber: '17868804701' //仅为示例，并非真实的电话号码
+      phoneNumber: this.data.iphone //仅为示例，并非真实的电话号码
     })
   },
   tousu: function () {

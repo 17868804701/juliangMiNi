@@ -36,8 +36,8 @@
       </view>
     </view>
   </view>
-  <button class='shenbao' bindtap='shenbao'>立即申报</button>
-
+ 
+<button class='shenbao' bindtap='shenbao'>立即申报</button> 
 </view>
 
 <view class="{{selected2?'show':'hidden'}}">

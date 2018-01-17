@@ -52,22 +52,26 @@ line-height: 75rpx;
  position: absolute;
  margin-left:30rpx;
  margin-top: 20rpx;
+ font-size: 25rpx;
 }
 .sb_code{
  position: absolute;
   margin-left: 30rpx;
  margin-top:70rpx;
+ font-size: 25rpx;
 }
 .sb_cj{
 position: absolute;
  margin-left: 30rpx;
  margin-top: 115rpx;
+ font-size: 25rpx;
 }
 
 .sb_xh{
  position: absolute;
-  margin-left: 440rpx;
+  margin-left: 400rpx;
  margin-top: 20rpx;
+ font-size: 25rpx;
 }
 .item{
   width: 92%;
