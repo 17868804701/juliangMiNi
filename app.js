@@ -1,8 +1,9 @@
 //app.js
 App({
   data:{
-    url:"http://10.20.0.75:8888/",
+    // url:"http://10.20.0.75:8888/",
     //  url:"http://118.89.49.82/juliangjidian",
+     url:"http://47.93.99.203/juliangjidian",
     qyId:"",
     companyName:"",
     jsessionid:"",

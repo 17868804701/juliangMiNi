@@ -57,8 +57,16 @@ Page({
           second_party_linkman: res.data.contract.second_party_linkman,//乙
           secondt_party_company_name: res.data.contract.secondt_party_company_name,//乙
           secondt_party_enterprise_number: res.data.contract.secondt_party_enterprise_number,//乙
-          first_party_linkman: res.data.contract.first_party_linkman,//乙
+        
 
+
+          // 第三方
+
+          third_party_iphone: res.data.contract.third_party_iphone,//乙
+          third_party_linkman: res.data.contract.second_party_linkman,//乙
+          third_party_company_name: res.data.contract.third_party_company_name,//乙
+          third_party_enterprise_number: res.data.contract.third_party_enterprise_number,//乙
+      
 
 
 

@@ -129,86 +129,99 @@ Page({
   },
   // 继续添加
   jxtj: function () {
-    this.data.SheBeiList.errorImage1 = this.data.img[0];
-    this.data.SheBeiList.errorImage2 = this.data.img[1];
-    this.data.SheBeiList.errorImage3 = this.data.img[2];
-    this.data.SheBeiList.errorImage4 = this.data.img[3];
-    this.data.SheBeiList.errorImage5 = this.data.img[4];
-    this.data.SheBeiList.errorDescription = this.data.desc;
-    console.log(this.data.SheBeiList)
-
-    var logs1 = wx.getStorageSync('logs1') || []
-    logs1.unshift(this.data.SheBeiList)
-    wx.setStorageSync('logs1', logs1)
-    wx.navigateTo({
-      url: '../shenbao/shenbao',
-    })
-    this.data.equipsList.push(this.data.SheBeiList)
-    console.log(this.data.equipsList)
+    console.log(this.data.img)
+    if (this.data.img == undefined){
+      wx.showModal({
+        title: '提示',
+        content: '至少上传以一张照片',
+      })
+    }else{
+      this.data.SheBeiList.errorImage1 = this.data.img[0];
+      this.data.SheBeiList.errorImage2 = this.data.img[1];
+      this.data.SheBeiList.errorImage3 = this.data.img[2];
+      this.data.SheBeiList.errorImage4 = this.data.img[3];
+      this.data.SheBeiList.errorImage5 = this.data.img[4];
+      this.data.SheBeiList.errorDescription = this.data.desc;
+      console.log(this.data.SheBeiList)
+      var logs1 = wx.getStorageSync('logs1') || []
+      logs1.unshift(this.data.SheBeiList)
+      wx.setStorageSync('logs1', logs1)
+      wx.navigateTo({
+        url: '../shenbao/shenbao',
+      })
+      this.data.equipsList.push(this.data.SheBeiList)
+      console.log(this.data.equipsList)
+    }
   },
   // 保存提交
   bc: function () {
-    this.data.SheBeiList.errorImage1 = this.data.img[0] || "";
-    this.data.SheBeiList.errorImage2 = this.data.img[1] || "";
-    this.data.SheBeiList.errorImage3 = this.data.img[2] || "";
-    this.data.SheBeiList.errorImage4 = this.data.img[3] || "";
-    this.data.SheBeiList.errorImage5 = this.data.img[4] || "";
-    this.data.SheBeiList.errorDescription = this.data.desc;
-    console.log(this.data.SheBeiList)
-    var logs1 = wx.getStorageSync('logs1') || []
-    logs1.unshift(this.data.SheBeiList)
-    wx.setStorageSync('logs1', logs1)
-    var that = this;
-    // 获取申报设备列表接口
-    console.log(this.data.sb_type)
-    if (this.data.sb_type != "请选择") {
-      wx.request({
-        url: `${getApp().data.url}/miniApps/order/createOrder`,
-        data: {
-          "order": {
-            "qyId": getApp().data.qyId,
-            "orderType": this.data.sb_type,
-            "companyName": getApp().data.companyName,
-          },
-          "equips": wx.getStorageSync('logs1')
-        },
-        method: 'POST',
-        header: {
-          "Content-Type": "application/json",
-          "Cookie": getApp().data.jsessionid
-        },
-        success: function (res) {
-          console.log(res.data);
-          if(res.data.success==true){
-            wx.clearStorageSync();
-            wx.showToast({
-              title: '申报成功',
-            })
-            wx.switchTab({
-              url: '../index/index',
-            })
-          }else{
-            wx.clearStorageSync();
-            wx.showModal({
-              title: '提示',
-              content: '申报失败，请重试',
-            })
-          }
-        },
-        fail: function (res) {
-          // fail
-        },
-        complete: function (res) {
-          // complete
-        }
-      })
-
-    } else {
+    if (this.data.img == undefined){
       wx.showModal({
         title: '提示',
-        content: '参数有无，请选择申报类型',
+        content: '至少上传以一张照片',
       })
-    }
+    }else{
+      this.data.SheBeiList.errorImage1 = this.data.img[0] || "";
+      this.data.SheBeiList.errorImage2 = this.data.img[1] || "";
+      this.data.SheBeiList.errorImage3 = this.data.img[2] || "";
+      this.data.SheBeiList.errorImage4 = this.data.img[3] || "";
+      this.data.SheBeiList.errorImage5 = this.data.img[4] || "";
+      this.data.SheBeiList.errorDescription = this.data.desc;
+      console.log(this.data.SheBeiList)
+      var logs1 = wx.getStorageSync('logs1') || []
+      logs1.unshift(this.data.SheBeiList)
+      wx.setStorageSync('logs1', logs1)
+      var that = this;
+      // 获取申报设备列表接口
+      console.log(this.data.sb_type)
+      if (this.data.sb_type != "请选择") {
+        wx.request({
+          url: `${getApp().data.url}/miniApps/order/createOrder`,
+          data: {
+            "order": {
+              "qyId": getApp().data.qyId,
+              "orderType": this.data.sb_type,
+              "companyName": getApp().data.companyName,
+            },
+            "equips": wx.getStorageSync('logs1')
+          },
+          method: 'POST',
+          header: {
+            "Content-Type": "application/json",
+            "Cookie": getApp().data.jsessionid
+          },
+          success: function (res) {
+            console.log(res.data);
+            if (res.data.success == true) {
+              wx.clearStorageSync();
+              wx.showToast({
+                title: '申报成功',
+              })
+              wx.switchTab({
+                url: '../index/index',
+              })
+            } else {
+              wx.clearStorageSync();
+              wx.showModal({
+                title: '提示',
+                content: '申报失败，请重试',
+              })
+            }
+          },
+          fail: function (res) {
+            // fail
+          },
+          complete: function (res) {
+            // complete
+          }
+        })
 
+      } else {
+        wx.showModal({
+          title: '提示',
+          content: '参数有无，请选择申报类型',
+        })
+      }
+    }
   },
 })

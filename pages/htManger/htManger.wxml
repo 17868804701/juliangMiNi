@@ -1,51 +1,72 @@
 <view class='container'>
- <view class='title'>
-  聚良企业合同管理
- </view>
- <text style='margin-left:30rpx;'>合同类型：<text style='color:#4CAF50;font-weight:bold'>{{contract_type}}</text></text>
- <view class='content'>
-  <view class='jia'>
-   <text> 甲方信息</text>
+  <view class='title'>
+    聚良企业合同管理
   </view>
-  <view class='info'>
-   <view class='list'>
+  <text style='margin-left:30rpx;'>合同类型：<text style='color:#4CAF50;font-weight:bold'>{{contract_type}}</text></text>
+  <view class='content'>
+    <view class='jia'>
+      <text> 甲方信息</text>
+    </view>
+    <view class='info'>
+      <view class='list'>
+        <text>企业名称</text>
+        <text>{{first_party_company_name}}</text>
+      </view>
+      <view class='list'>
+        <text>企业税号</text>
+        <text>{{first_party_enterprise_number}}</text>
+      </view>
+      <view class='list'>
+        <text>联系人</text>
+        <text style='margin-left:85rpx;'>{{first_party_linkman}}</text>
+      </view>
+      <view class='list'>
+        <text>联系电话</text>
+        <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{first_party_iphone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='jia' style='margin-top:-1rpx;'>
+    <text> 乙方信息</text>
+  </view>
+  <view class='list'>
     <text>企业名称</text>
-    <text>{{first_party_company_name}}</text>
-   </view>
-   <view class='list'>
-    <text>企业税号</text>
-    <text>{{first_party_enterprise_number}}</text>
-   </view>
-   <view class='list'>
-    <text>联系人</text>
-    <text style='margin-left:85rpx;'>{{first_party_linkman}}</text>
-   </view>
-   <view class='list'>
-    <text>联系电话</text>
-    <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{first_party_iphone}}</text>
-   </view>
+    <text>{{secondt_party_company_name}}</text>
   </view>
- </view>
- <view class='jia' style='margin-top:-1rpx;'>
-  <text> 乙方信息</text>
- </view>
- <view class='list'>
-  <text>企业名称</text>
-  <text>{{secondt_party_company_name}}</text>
- </view>
- <view class='list'>
-  <text>企业税号</text>
-  <text>{{secondt_party_enterprise_number}}</text>
- </view>
- <view class='list'>
-  <text>联系人</text>
-  <text style='margin-left:85rpx;'>{{second_party_linkman}}</text>
- </view>
- <view class='list'>
-  <text>联系电话</text>
-  <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{second_party_iphone}}</text>
- </view>
- <view class='jia' style='margin-top:-1rpx;'>
+  <view class='list'>
+    <text>企业税号</text>
+    <text>{{secondt_party_enterprise_number}}</text>
+  </view>
+  <view class='list'>
+    <text>联系人</text>
+    <text style='margin-left:85rpx;'>{{second_party_linkman}}</text>
+  </view>
+  <view class='list'>
+    <text>联系电话</text>
+    <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{second_party_iphone}}</text>
+  </view>
+
+
+  <view class='jia' style='margin-top:-1rpx;' hidden='{{contract_type!="售后"}}'>
+    <text> 委托方信息</text>
+  </view>
+  <view class='list' hidden='{{contract_type!="售后"}}'>
+    <text>企业名称</text>
+    <text>{{third_party_company_name}}</text>
+  </view>
+  <view class='list' hidden='{{contract_type!="售后"}}'>
+    <text>企业税号</text>
+    <text>{{third_party_enterprise_number}}</text>
+  </view>
+  <view class='list' hidden='{{contract_type!="售后"}}'>
+    <text>联系人</text>
+    <text style='margin-left:85rpx;'>{{third_party_linkman}}</text>
+  </view>
+  <view class='list' hidden='{{contract_type!="售后"}}'>
+    <text>联系电话</text>
+    <text style='color:blue; text-decoration: underline' bindtap='callPhone'>{{third_party_iphone}}</text>
+  </view>
+  <!-- <view class='jia' style='margin-top:-1rpx;'>
   <text> 金额信息<text style='color:red;margin-left:40rpx;'>已下的数量批次之间用“/”分开</text></text>
  </view>
  <view class='list'>
@@ -79,31 +100,31 @@
  <view class='list'>
   <text>未完成售后</text> 
   <text>10/22</text>
- </view>
+ </view> -->
 
- <view class='jia' style='margin-top:-1rpx;'>
-  <text>日期</text>
- </view>
- <view class='list'>
-  <text>合同日期</text>
-  <text>{{contract_signing_date}}至{{contract_closing_date}}</text>
- </view>
+  <view class='jia' style='margin-top:-1rpx;'>
+    <text>日期</text>
+  </view>
+  <view class='list'>
+    <text>合同日期</text>
+    <text>{{contract_signing_date}}至{{contract_closing_date}}</text>
+  </view>
 
   <view class='list'>
-  <text>开票金额</text>
-  <text>{{ticket_total_money}}元</text>
- </view> 
-
- <view class='jia' style='margin-top:-1rpx;'>
-  <text> 设备清单</text>
- </view>
-
- <view class='item' wx:for="{{shebeiList}}">
-  <view>
-   <text class='sb_name'>设备名称：<text class='blod'>{{item.equipmentName}}</text></text>
-   <text class='sb_code'>出厂编码：<text class='blod'> {{item.factoryCode}}</text></text>
-   <text class='sb_cj'>生产厂家：<text class='blod'> {{item.manufactureFactory}}</text></text>
-   <text class='sb_xh'>规格型号：<text class='blod'> {{item.equipmentModel}}</text></text>
+    <text>开票金额</text>
+    <text>{{ticket_total_money}}元</text>
   </view>
- </view>
+
+  <view class='jia' style='margin-top:-1rpx;'>
+    <text> 设备清单</text>
+  </view>
+
+  <view class='item' wx:for="{{shebeiList}}">
+    <view>
+      <text class='sb_name'>设备名称：<text class='blod'>{{item.equipmentName}}</text></text>
+      <text class='sb_code'>出厂编码：<text class='blod'> {{item.factoryCode}}</text></text>
+      <text class='sb_cj'>生产厂家：<text class='blod'> {{item.manufactureFactory}}</text></text>
+      <text class='sb_xh'>规格型号：<text class='blod'> {{item.equipmentModel}}</text></text>
+    </view>
+  </view>
 </view>
