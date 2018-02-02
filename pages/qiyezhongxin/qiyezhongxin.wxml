@@ -20,6 +20,11 @@
     <text>修改密码</text>
     <image src='../img/right.png' class='right1'></image>
   </view>
+    <view class='item' bindtap='gonggao'>
+    <image src='../img/gonggao.png' class='xgmm'></image>
+    <text>通知公告</text>
+    <image src='../img/right.png' class='right1'></image>
+  </view>
   <view class='item' bindtap='call'>
     <image src='../img/ht1.png' class='xgmm'></image>
     <text>联系我们</text>

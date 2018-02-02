@@ -1,0 +1,5 @@
+<!--pages/gonggaoInfo/gonggaoInfo.wxml-->
+<view class='main'>
+  <text class='content'>{{content}}</text>
+</view>
+

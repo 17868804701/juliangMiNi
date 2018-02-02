@@ -1,0 +1,9 @@
+<!--pages/gonggao/gonggao.wxml-->
+<view class='main'>
+  <view class='list' wx:for="{{list}}" hidden='{{item.type=="维修工端"}}' bindtap='gonggaoInfo' data-content="{{item.notificationContent}}">
+    <view class='listItem'>
+      <text>{{item.notificationContent}}</text>
+    </view>
+    <image src='../img/right.png' class='right1'></image>
+  </view>
+</view>

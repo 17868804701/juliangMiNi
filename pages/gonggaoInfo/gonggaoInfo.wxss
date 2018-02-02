@@ -1,0 +1,8 @@
+/* pages/gonggaoInfo/gonggaoInfo.wxss */
+.content{
+  text-indent:50px;
+}
+.main{
+  /* border: 1px solid red; */
+  margin: 30rpx;
+}

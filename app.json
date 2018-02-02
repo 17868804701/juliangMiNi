@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/gonggaoInfo/gonggaoInfo",
     "pages/index/index",
+    "pages/gonggao/gonggao",
     "pages/shenbao/shenbao",
     "pages/addShebei/addShebei",
     "pages/orderInfo/orderInfo",

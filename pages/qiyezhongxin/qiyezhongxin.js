@@ -93,6 +93,11 @@ Page({
       url: '../qiyexinxi/qiyexinxi',
     })
   },
+  gonggao:function(){
+    wx.navigateTo({
+      url: '../gonggao/gonggao',
+    })
+  },
   call: function () {
     wx.makePhoneCall({
       phoneNumber: getApp().data.iphone //仅为示例，并非真实的电话号码
