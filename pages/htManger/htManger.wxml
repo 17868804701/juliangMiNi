@@ -118,7 +118,9 @@
   <view class='jia' style='margin-top:-1rpx;'>
     <text> 设备清单</text>
   </view>
-
+  <view hidden='{{shebeiListLength!=0}}' style='width:100%;height:170rpx;line-height:170rpx;text-align:center;color:#808080'>
+      --- 目前没有设备 ---
+  </view>
   <view class='item' wx:for="{{shebeiList}}">
     <view>
       <text class='sb_name'>设备名称：<text class='blod'>{{item.equipmentName}}</text></text>

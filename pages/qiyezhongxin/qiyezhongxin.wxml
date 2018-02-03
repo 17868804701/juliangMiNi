@@ -26,7 +26,7 @@
     <image src='../img/right.png' class='right1'></image>
   </view>
   <view class='item' bindtap='call'>
-    <image src='../img/ht1.png' class='xgmm'></image>
+    <image src='../img/call.png' class='xgmm'></image>
     <text>联系我们</text>
     <image src='../img/right.png' class='right1'></image>
   </view>

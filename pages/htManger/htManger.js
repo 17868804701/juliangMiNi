@@ -45,6 +45,7 @@ Page({
         console.log(res.data.contract.ceds);
         that.setData({
           shebeiList: res.data.contract.ceds,
+          shebeiListLength: res.data.contract.ceds.length,
           contract_type: res.data.contract.contract_type,//设备类型
           first_party_company_name: res.data.contract.first_party_company_name,//甲方信息
           first_party_enterprise_number: res.data.contract.first_party_enterprise_number,//甲方信息

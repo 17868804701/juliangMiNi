@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/gonggaoInfo/gonggaoInfo",
     "pages/index/index",
+    "pages/gonggaoInfo/gonggaoInfo",
     "pages/gonggao/gonggao",
     "pages/shenbao/shenbao",
     "pages/addShebei/addShebei",
@@ -30,26 +30,26 @@
     "borderStyle": "",
     "list": [
       {
-        "selectedIconPath": "pages/img/yw1.png",
-        "iconPath": "pages/img/yw2.png",
+        "selectedIconPath": "pages/img/fw2.png",
+        "iconPath": "pages/img/fw1.png",
         "pagePath": "pages/index/index",
         "text": "业务服务"
       },
       {
-        "selectedIconPath": "pages/img/sb1.png",
-        "iconPath": "pages/img/sb.png",
+        "selectedIconPath": "pages/img/lb2.png",
+        "iconPath": "pages/img/lb1.png",
         "pagePath": "pages/shebei/shebei",
         "text": "设备列表"
       },
       {
-        "selectedIconPath": "pages/img/ht1.png",
-        "iconPath": "pages/img/ht.png",
+        "selectedIconPath": "pages/img/ht2.png",
+        "iconPath": "pages/img/ht1.png",
         "pagePath": "pages/htList/htList",
         "text": "合同管理"
       },
       {
-        "selectedIconPath": "pages/img/q1.png",
-        "iconPath": "pages/img/q2.png",
+        "selectedIconPath": "pages/img/qy2.png",
+        "iconPath": "pages/img/qy1.png",
         "pagePath": "pages/qiyezhongxin/qiyezhongxin",
         "text": "企业信息"
       }
