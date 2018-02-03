@@ -12,7 +12,7 @@
       <text>企业税号</text>
       <text style='font-weight:bold;color:#4CAF50'>{{enterpriseNumber}}</text>
     </view>
-    <view class='list'>
+    <view class='list' id='address'>
       <text>企业地址</text>
       <text>{{companyAddress}}</text>
     </view>
@@ -53,11 +53,11 @@
       <text>设备描述：{{item.errorDescription}}</text>
     </view>
     <view class='shebei_img'>
-      <image src="{{url+item.errorImage1}}"></image>
-      <image src='{{url+item.errorImage2}}'></image>
-      <image src='{{url+item.errorImage3}}'></image>
-      <image src='{{url+item.errorImage4}}'></image>
-      <image src='{{url+item.errorImage5}}'></image>
+      <image src="{{url+item.errorImage1}}" bindtap='showImage' data-img="{{item.errorImage1}}"></image>
+      <image src='{{url+item.errorImage2}}' bindtap='showImage' data-img="{{item.errorImage2}}"></image>
+      <image src='{{url+item.errorImage3}}' bindtap='showImage' data-img="{{item.errorImage3}}"></image>
+      <image src='{{url+item.errorImage4}}' bindtap='showImage' data-img="{{item.errorImage4}}"></image>
+      <image src='{{url+item.errorImage5}}' bindtap='showImage' data-img="{{item.errorImage5}}"></image>
     </view>
     <!-- 自己设备描述完 -->
     <!-- 工程师描述 -->
@@ -65,11 +65,11 @@
       <text>工程师描述：{{item.workErrorDescription}}</text>
     </view>
     <view class='shebei_img' hidden='{{maintain_status=="待派工"}}'>
-      <image src='{{url+item.workErrorImage1}}'></image>
-      <image src='{{url+item.workErrorImage2}}'></image>
-      <image src='{{url+item.workErrorImage3}}'></image>
-      <image src='{{url+item.workErrorImage4}}'></image>
-      <image src='{{url+item.workErrorImage5}}'></image>
+      <image src='{{url+item.workErrorImage1}}' bindtap='showImages' data-img="{{item.workErrorImage1}}"></image>
+      <image src='{{url+item.workErrorImage2}}' bindtap='showImages' data-img="{{item.workErrorImage2}}"></image>
+      <image src='{{url+item.workErrorImage3}}' bindtap='showImages' data-img="{{item.workErrorImage3}}"></image>
+      <image src='{{url+item.workErrorImage4}}' bindtap='showImages' data-img="{{item.workErrorImage4}}"></image>
+      <image src='{{url+item.workErrorImage5}}' bindtap='showImages' data-img="{{item.workErrorImage5}}"></image>
     </view>
     <!-- 工程师描述完 -->
   </view>

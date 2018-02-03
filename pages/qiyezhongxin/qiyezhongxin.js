@@ -74,7 +74,7 @@ Page({
     })
   },
   btn_logout: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../login/login',
     })
   },

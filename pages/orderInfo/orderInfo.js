@@ -59,7 +59,26 @@ Page({
   onReady: function () {
 
   },
-
+  showImage:function(e){
+    console.log(e.currentTarget.dataset.img)
+    var url = getApp().data.url + e.currentTarget.dataset.img
+    var imgList = [];
+    imgList.push(url)
+    wx.previewImage({
+      current: e.currentTarget.dataset.img, // 当前显示图片的http链接
+      urls: imgList // 需要预览的图片http链接列表
+    })
+  },
+  showImages:function(){
+    console.log(e.currentTarget.dataset.img)
+    var url = getApp().data.url + e.currentTarget.dataset.img
+    var imgList = [];
+    imgList.push(url)
+    wx.previewImage({
+      current: e.currentTarget.dataset.img, // 当前显示图片的http链接
+      urls: imgList // 需要预览的图片http链接列表
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
