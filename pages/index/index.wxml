@@ -25,7 +25,7 @@
     <view class='list' bindlongtap='del' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
-        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId="{{item.orderId}}">{{item.maintainStatus}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId="{{item.orderId}}">查看详情</text>
       </view>
       <view class='info'>
         <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
@@ -38,6 +38,10 @@
   </view>
  
 <button class='shenbao' bindtap='shenbao'>立即申报</button> 
+  <view wx:if="{{dpgListLength!==0}}">
+   <text style="color:#808080;margin-left:30rpx;font-size:25rpx;margin-top:20rpx; position: absolute;">*长按可以删除订单哦</text>
+  </view>
+
 </view>
 
 <view class="{{selected2?'show':'hidden'}}">
@@ -49,7 +53,7 @@
     <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
-        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' catchtap='okOrder' data-orderId="{{item.orderId}}">确认订单</text>
       </view>
       <view class='info'>
         <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
@@ -75,7 +79,7 @@
     <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
-        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' catchtap='pingjia'>{{item.maintainStatus}}</text>
+        <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' data-orderId="{{item.orderId}}" catchtap='pingjia'>评价订单</text>
       </view>
       <view class='info'>
         <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>

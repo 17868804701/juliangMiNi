@@ -112,10 +112,9 @@ font-size: 25rpx;
   color: white;
   position: absolute;
   line-height: 70rpx;
-   margin-top: 40rpx; 
+   margin-top: 60rpx; 
    font-size: 25rpx; 
    margin-left: 25%;
-
 }
 .tip_error{
   color: #808080;

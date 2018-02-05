@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/pingjia/pingjia",
     "pages/index/index",
     "pages/gonggaoInfo/gonggaoInfo",
     "pages/gonggao/gonggao",
@@ -16,7 +17,6 @@
     "pages/qiyezhongxin/qiyezhongxin",
     "pages/web/web",
     "pages/tousu/tousu",
-    "pages/pingjia/pingjia",
     "pages/logs/logs"
   ],
   "window": {

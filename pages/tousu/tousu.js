@@ -87,6 +87,9 @@ Page({
             wx.showToast({
               title: '投诉成功',
             })
+            wx.navigateBack({
+              url:"../orderInfo/orderInfo"
+            })
         }else{
           wx.showModal({
             title: '提示',

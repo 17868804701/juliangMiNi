@@ -69,7 +69,7 @@ Page({
       urls: imgList // 需要预览的图片http链接列表
     })
   },
-  showImages:function(){
+  showImages:function(e){
     console.log(e.currentTarget.dataset.img)
     var url = getApp().data.url + e.currentTarget.dataset.img
     var imgList = [];

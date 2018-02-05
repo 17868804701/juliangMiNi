@@ -18,6 +18,6 @@
   </text>
 </view>
 <view>
-<textarea placeholder='请输入评价内容'></textarea>
-<button class='pj'>立即评价</button>
+<textarea placeholder='请输入评价内容' bindinput='content'></textarea>
+<button class='pj' bindtap='pingjia'>立即评价</button>
 </view>

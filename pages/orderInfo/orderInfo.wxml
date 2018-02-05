@@ -86,7 +86,7 @@
     </view>
   </view> -->
   <!-- 工作照完 -->
-  <view id='tousu'>
+  <view id='tousu' hidden='{{maintain_status!=="已完成"}}'>
     <text class='tousu' bindtap='tousu'>投诉</text>
   </view>
 </view>

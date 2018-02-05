@@ -102,9 +102,10 @@ Page({
       }
     })
   },
-  pingjia: () => {
+  pingjia: (e) => {
+    console.log(e.currentTarget.dataset.orderid);
     wx.navigateTo({
-      url: '../pingjia/pingjia',
+      url: '../pingjia/pingjia?orderId=' + e.currentTarget.dataset.orderid,
     })
   },
   orderInfo: (e) => {
@@ -238,6 +239,48 @@ Page({
           // complete
         }
       })
+  },
+  // 确认订单
+  okOrder: function (e) {
+    console.log(e.currentTarget.dataset.orderid)
+    wx.request({
+      url: `${getApp().data.url}/miniApps/order /setOrderStatus`,
+      data: {
+        "qyId": getApp().data.qyId,
+        "orderId": e.currentTarget.dataset.orderid,
+        "maintainStatus": "待开工"
+      },
+      method: 'POST',
+      header: {
+        "Content-Type": "application/json",
+        "Cookie": getApp().data.jsessionid
+      },
+      success: function (res) {
+        console.log(res.data);
+        if (res.data.success == true) {
+          wx.showToast({
+            title: '确认订单成功',
+          })
+          wx.reLaunch({
+            url: '../index/index',
+          })
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: '确认订单成功',
+          })
+        }
+        // that.setData({
+        //   dqrList: res.data.data,
+        //   dqrListLength: res.data.data.length
+        // })
+      },
+      fail: function (res) {
+        // fail
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
   }
-
 })
