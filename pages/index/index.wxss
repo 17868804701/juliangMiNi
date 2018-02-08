@@ -115,6 +115,7 @@ font-size: 25rpx;
    margin-top: 60rpx; 
    font-size: 25rpx; 
    margin-left: 25%;
+   margin-bottom: 30rpx;
 }
 .tip_error{
   color: #808080;

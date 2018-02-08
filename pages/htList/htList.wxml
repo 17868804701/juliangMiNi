@@ -1,6 +1,6 @@
 <view class='container'>
   <view wx:if="{{htListLength==0}}" class='tip_error'>
-  ---目前还没有添加设备---
+  ---目前还没有合同---
   </view>
   <view class='list' bindtap='htManger' wx:for="{{htList}}" data-contractId="{{item.contractId}}">
     <image src='../img/ht_icon.png'></image>

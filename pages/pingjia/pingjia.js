@@ -8,7 +8,7 @@ Page({
   star3: '☆',
   star4: '☆',
   star5: '★',
-  str: '请点击星星评价'
+  stars:""
  },
  tousu: function () {
   wx.navigateTo({
@@ -23,7 +23,8 @@ Page({
     star4: '☆',
     star3: '☆',
     star2: '☆',
-    str: this.data.str1
+    str: this.data.str1,
+    stars:1
    })
   } else {
    this.setData({
@@ -40,7 +41,8 @@ Page({
     star5: '☆',
     star4: '☆',
     star3: '☆',
-    str: this.data.str2
+    str: this.data.str2,
+    stars: 2
    })
   } else {
    this.setData({
@@ -56,7 +58,8 @@ Page({
    this.setData({
     star5: '☆',
     star4: '☆',
-    str: this.data.str3
+    str: this.data.str3,
+    stars: 3
    })
   } else {
    this.setData({
@@ -72,7 +75,8 @@ Page({
   if (this.data.star4 == '★') {
    this.setData({
     star5: '☆',
-    str: this.data.str4
+    str: this.data.str4,
+    stars: 4
    })
   } else {
    this.setData({
@@ -92,7 +96,8 @@ Page({
    star3: '★',
    star4: '★',
    star5: '★',
-   str: this.data.str5
+   str: this.data.str5,
+   stars: 55
   })
  },
  onLoad: function (options) {
@@ -118,12 +123,13 @@ Page({
   console.log(this.data.content)
  },
  pingjia: function () {
+   console.log(this.data.stars)
    wx.request({
      url: `${getApp().data.url}/miniApps/order/orderEvaluate`,
      data: {
        "orderId": this.data.id,
        "evaluate": this.data.content,//评价内容
-       "evaluateLevel":"4"//星级
+       "evaluateLevel": this.data.stars//星级
      },
      method: 'POST',
      header: {

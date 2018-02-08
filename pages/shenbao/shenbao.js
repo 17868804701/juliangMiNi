@@ -173,8 +173,8 @@ Page({
       wx.setStorageSync('logs1', logs1)
       var that = this;
       // 获取申报设备列表接口
-      console.log(this.data.sb_type)
-      if (this.data.sb_type != "请选择") {
+      console.log(that.data.sb_type)
+      if (that.data.sb_type != undefined) {
         wx.request({
           url: `${getApp().data.url}/miniApps/order/createOrder`,
           data: {
