@@ -219,7 +219,7 @@ Page({
       } else {
         wx.showModal({
           title: '提示',
-          content: '参数有无，请选择申报类型',
+          content: '参数有误，请选择申报类型',
         })
       }
     }

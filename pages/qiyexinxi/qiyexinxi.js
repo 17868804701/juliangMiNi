@@ -79,6 +79,7 @@ Page({
   
   },
   update:function(){
+    var that=this 
     wx.request({
       url: `${getApp().data.url}miniApps/enterprise/updateEnterprise`,
       data:{
@@ -97,6 +98,14 @@ Page({
         if(res.data.success==true){
             wx.showToast({
               title: '修改信息成功',
+            })
+            getApp().data.companyAddress =  res.data.enterpriseBasicInfo.companyAddress
+            getApp().data.iphone = res.data.enterpriseBasicInfo.iphone
+            getApp().data.linkman = res.data.enterpriseBasicInfo.linkman
+            that.setData({
+              lxr: getApp().data.linkman,
+              lxdz: getApp().data.companyAddress,
+              lxdh: getApp().data.iphone
             })
             wx.navigateBack({
               url:"../qiyezhongxin/qiyezhongxin"
