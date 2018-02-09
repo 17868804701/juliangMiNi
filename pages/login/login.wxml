@@ -12,6 +12,6 @@
   </view>
   <view class='tip'>
     <text bindtap='register'>用户注册</text> |
-    <text>用户须知</text>
+    <text bindtap='yonghuxuzhi'>用户须知</text>
   </view>
 </view>

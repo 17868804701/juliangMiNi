@@ -41,7 +41,8 @@ Page({
           iphone: res.data.qyInfo.iphone,
           linkman: res.data.qyInfo.linkman,
           companyAddress: res.data.qyInfo.companyAddress,
-          orderList: res.data.orderDetails
+          orderList: res.data.orderDetails,
+          workPhoto: res.data.work_photo,
         })
       },
       fail: function (res) {
@@ -70,6 +71,16 @@ Page({
     })
   },
   showImages:function(e){
+    console.log(e.currentTarget.dataset.img)
+    var url = getApp().data.url + e.currentTarget.dataset.img
+    var imgList = [];
+    imgList.push(url)
+    wx.previewImage({
+      current: e.currentTarget.dataset.img, // 当前显示图片的http链接
+      urls: imgList // 需要预览的图片http链接列表
+    })
+  },
+  showworkImages:function(e){
     console.log(e.currentTarget.dataset.img)
     var url = getApp().data.url + e.currentTarget.dataset.img
     var imgList = [];

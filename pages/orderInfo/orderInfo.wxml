@@ -74,17 +74,27 @@
     <!-- 工程师描述完 -->
   </view>
   <!-- 工作照 -->
-  <!-- <view class='shebei'>
+  <view class='shebei' hidden='{{maintain_status!=="已完成"}}'>
     <view class='gongzuozhao'>
       <view class='shebei_info'>
         <text>工作照</text>
       </view>
       <view class='shebei_img'>
-        <image src='../img/head.jpg'></image>
-        <image src='../img/head.jpg'></image>
+        <image src='{{url+workPhoto}}' bindtap='showworkImages' data-img="{{workPhoto}}"></image>
       </view>
     </view>
-  </view> -->
+  </view>
+
+  <view class='shebei' hidden='{{maintain_status!=="待评价"}}'>
+    <view class='gongzuozhao'>
+      <view class='shebei_info'>
+        <text>工作照</text>
+      </view>
+      <view class='shebei_img'>
+        <image src='{{url+workPhoto}}' bindtap='showworkImages' data-img="{{workPhoto}}"></image>
+      </view>
+    </view>
+  </view>
   <!-- 工作照完 -->
   <view id='tousu' hidden='{{maintain_status!=="已完成"}}'>
     <text class='tousu' bindtap='tousu'>投诉</text>
