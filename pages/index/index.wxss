@@ -124,3 +124,13 @@ font-size: 25rpx;
   font-size: 25rpx;
    margin-top: 140rpx 
 }
+.s{
+  background: #4CAF50;
+  color:white!important;
+  height: 10rpx;
+   line-height: 10rpx; 
+  margin-top: 15rpx;
+  font-size: 20rpx!important;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
