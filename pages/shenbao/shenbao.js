@@ -8,7 +8,7 @@ Page({
     sbList: [],
     index: 0,
     sbName: 0,
-    array: ["请选择", "维修", "售后"],
+    array: ["维修", "售后"],
     SheBeiList: {},
     equipsList: []
   },
@@ -174,54 +174,46 @@ Page({
       var that = this;
       // 获取申报设备列表接口
       console.log(that.data.sb_type)
-      if (that.data.sb_type != undefined) {
-        wx.request({
-          url: `${getApp().data.url}/miniApps/order/createOrder`,
-          data: {
-            "order": {
-              "qyId": getApp().data.qyId,
-              "orderType": this.data.sb_type,
-              "companyName": getApp().data.companyName,
-            },
-            "equips": wx.getStorageSync('logs1')
+      wx.request({
+        url: `${getApp().data.url}/miniApps/order/createOrder`,
+        data: {
+          "order": {
+            "qyId": getApp().data.qyId,
+            "orderType": this.data.sb_type || "维修",
+            "companyName": getApp().data.companyName,
           },
-          method: 'POST',
-          header: {
-            "Content-Type": "application/json",
-            "Cookie": getApp().data.jsessionid
-          },
-          success: function (res) {
-            console.log(res.data);
-            if (res.data.success == true) {
-              wx.clearStorageSync();
-              wx.showToast({
-                title: '申报成功',
-              })
-              wx.switchTab({
-                url: '../index/index',
-              })
-            } else {
-              wx.clearStorageSync();
-              wx.showModal({
-                title: '提示',
-                content: '申报失败，请重试',
-              })
-            }
-          },
-          fail: function (res) {
-            // fail
-          },
-          complete: function (res) {
-            // complete
+          "equips": wx.getStorageSync('logs1')
+        },
+        method: 'POST',
+        header: {
+          "Content-Type": "application/json",
+          "Cookie": getApp().data.jsessionid
+        },
+        success: function (res) {
+          console.log(res.data);
+          if (res.data.success == true) {
+            wx.clearStorageSync();
+            wx.showToast({
+              title: '申报成功',
+            })
+            wx.switchTab({
+              url: '../index/index',
+            })
+          } else {
+            wx.clearStorageSync();
+            wx.showModal({
+              title: '提示',
+              content: '申报失败，请重试',
+            })
           }
-        })
-
-      } else {
-        wx.showModal({
-          title: '提示',
-          content: '参数有误，请选择申报类型',
-        })
-      }
+        },
+        fail: function (res) {
+          // fail
+        },
+        complete: function (res) {
+          // complete
+        }
+      })
     }
   },
 })

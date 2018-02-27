@@ -1,7 +1,7 @@
 <view class="container">
   <view class='user'>
     <image src='../img/user.png' class='user_icon'></image>
-    <input placeholder='用户名/税号' type='text' bindinput='username'></input>
+    <input placeholder='用户名/税号' type='text' bindinput='username' maxlength='18'></input>
   </view>
   <view class='password'>
     <image src='../img/lock.png' class='pwd_icon'></image>

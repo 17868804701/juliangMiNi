@@ -265,9 +265,9 @@ Page({
             url: '../index/index',
           })
         } else {
-          wx.showModal({
+          wx.showToast({
             title: '提示',
-            content: '确认订单成功',
+            content: '确认订单失败',
           })
         }
         // that.setData({
