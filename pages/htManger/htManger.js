@@ -43,9 +43,17 @@ Page({
       success: function (res) {
         console.log(res.data);
         console.log(res.data.contract.ceds);
+        console.log(res.data.contract.wbTimes)
         that.setData({
+          wbTimes: res.data.contract.wbTimes,
+
+
+
+
+
           shebeiList: res.data.contract.ceds,
           shebeiListLength: res.data.contract.ceds.length,
+          contract_file: res.data.contract.contract_file,
           contract_type: res.data.contract.contract_type,//设备类型
           first_party_company_name: res.data.contract.first_party_company_name,//甲方信息
           first_party_enterprise_number: res.data.contract.first_party_enterprise_number,//甲方信息
@@ -126,5 +134,21 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  showHt:function(e){
+    console.log(e.currentTarget.dataset.file)
+    var url = e.currentTarget.dataset.file
+    wx.downloadFile({
+      url: getApp().data.url+url,
+      success: function (res) {
+        var filePath = res.tempFilePath
+        wx.openDocument({
+          filePath: filePath,
+          success: function (res) {
+            console.log('打开文档成功')
+          }
+        })
+      }
+    })
   }
 })

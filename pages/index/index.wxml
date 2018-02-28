@@ -9,7 +9,7 @@
       <view>待确认</view>
     </view>
     <view class="{{selected3?'red':'default'}} title" bindtap="selected3">
-      <view>待评价</view>
+      <view>待评价</view>  
     </view>
     <view class="{{selected4?'red':'default'}} title" bindtap="selected4">
       <view>已完成</view>
@@ -22,13 +22,13 @@
       <text class='tip_error'>---目前还没有订单---</text>
   </view>
   <view class="introduce" wx:for="{{dpgList}}" wx:if="{{dpgListLength!=0}}">
-    <view class='list' bindlongtap='del' data-orderId="{{item.orderId}}">
+    <view class='list' bindlongtap='del' data-orderId="{{item.orderId}}" hidden='{{item.orderType=="自揽"}}'>
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' bindtap='orderInfo' data-orderId="{{item.orderId}}" class='s'>查看详情</text>
       </view>
       <view class='info'>
-        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='ggxh'>订单状态：<text style='font-weight:bold;color:#4CAF50'>{{item.maintainStatus}}</text></text>
         <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
         <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
         <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
@@ -50,13 +50,13 @@
       <text class='tip_error'>---目前还没有订单---</text>
   </view>
   <view class="introduce" wx:for="{{dqrList}}" wx:if="{{dqrListLength!=0}}">
-    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
+    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}" hidden='{{item.orderType=="自揽"}}'>
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' catchtap='okOrder' data-orderId="{{item.orderId}}" class='s'>确认订单</text>
       </view>
       <view class='info'>
-        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='ggxh'>维修费用：<text style='font-weight:bold;color:#4CAF50'>{{item.maintenanceCosts}}元</text></text>
         <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
         <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
         <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
@@ -76,13 +76,13 @@
      <text class='tip_error'>---目前还没有订单---</text>
     </view>
   <view class="introduce" wx:for="{{dpjList}}" wx:if="{{dpjListLength!=0}}">
-    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}">
+    <view class='list' bindtap='orderInfo' data-orderId="{{item.orderId}}" hidden='{{item.orderType=="自揽"}}'>
       <view class='name'>
         <text style='font-size:30rpx'>订单编号：{{item.orderCode}}</text>
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx' data-orderId="{{item.orderId}}" catchtap='pingjia' class='s'>评价订单</text>
       </view>
       <view class='info'>
-        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='ggxh'>订单状态<text style='font-weight:bold;color:#4CAF50'>{{item.maintainStatus}}</text></text>
         <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
         <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
         <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>
@@ -106,7 +106,7 @@
         <text style='float:right;margin-right:40rpx;color:#4CAF50;font-size:30rpx'>{{item.maintainStatus}}</text>
       </view>
       <view class='info'>
-        <text class='ggxh'>规格型号：<text style='font-weight:bold;color:#4CAF50'>TCL</text></text>
+        <text class='ggxh'>订单状态<text style='font-weight:bold;color:#4CAF50'>{{item.maintainStatus}}</text></text>
         <text class='sccj'>申报企业：<text style='font-weight:bold;color:#4CAF50'>{{item.companyName}}</text></text>
         <text class='ccbm'>付款状态：<text style='font-weight:bold;color:#4CAF50'>{{item.paymentStatus}}</text></text>
         <text class='ccsj'>申报时间：<text style='font-weight:bold;color:#4CAF50'>{{item.createDate}}</text></text>

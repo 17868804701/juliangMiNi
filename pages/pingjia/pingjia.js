@@ -129,7 +129,7 @@ Page({
      data: {
        "orderId": this.data.id,
        "evaluate": this.data.content,//评价内容
-       "evaluateLevel": this.data.stars//星级
+       "evaluateLevel": this.data.stars||5//星级
      },
      method: 'POST',
      header: {

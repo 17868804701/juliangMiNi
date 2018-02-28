@@ -87,3 +87,19 @@ position: absolute;
  font-weight: bold;
  color: #4CAF50;
 }
+
+
+.contract_file{
+     overflow: hidden; white-space: nowrap; 
+   text-overflow:ellipsis;
+}
+.file{
+  color: blue;
+  text-decoration: underline;
+}
+
+.wbTimes{
+  height: 80rpx;
+  border: 1px solid #e3e3e3;
+  margin-top: 40rpx;
+}
