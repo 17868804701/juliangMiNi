@@ -20,24 +20,27 @@ margin-top: 50rpx;
  margin-left: 20rpx;
 }
 .login_btn{
- width: 96%;
- height: 80rpx;
- line-height: 80rpx;
- font-size: 30rpx;
+ width: 30%;
+ height: 75rpx;
+ line-height: 75rpx;
+ font-size: 20rpx;
  background: #4CAF50;
  border: 0;
  color: white;
- margin-top: 50rpx;
+ margin-top: -85rpx;
+ margin-left: 500rpx;
 }
 .tip{
  text-align: center;
  margin-top: 40rpx;
  color:#018fd1;
 }
-.reset_tip{
-  color: #018fd1;
-  margin-left:320rpx;
-  position: fixed;
-  bottom: 30rpx;
-  display: inline-block
+.reset_btn{
+  width: 90%;
+  background: #4CAF50;
+  color: white;
+  font-size: 25rpx;
+  height: 75rpx;
+  line-height:75rpx;
+  margin-top: 80rpx;
 }

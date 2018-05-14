@@ -1,0 +1,14 @@
+<view class="container">
+  <view class='user'>
+    <image src='../img/phone.png' class='user_icon'></image>
+    <input placeholder='请输入手机号' placeholder-style='font-size:25rpx' type='text' bindinput='tel' maxlength='11'></input>
+  </view>
+  <view class='password'>
+    <image src='../img/lock.png' class='pwd_icon'></image>
+    <input placeholder='输入验证码' placeholder-style='font-size:25rpx' type='password' bindinput='yanzhengma' class='pwd' style=' width: 55%'></input>
+  </view>
+  <view class='login'>
+    <button class='login_btn' bindtap='send'>发送验证码</button>
+  </view>
+  <button class='reset_btn' bindtap='reset'>重置密码</button>
+</view>

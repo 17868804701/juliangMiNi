@@ -59,6 +59,7 @@ Page({
 
   },
   tijiao: function () {
+ 
     console.log(this.data.gsmc)
     console.log(this.data.qysh)
     console.log(this.data.address)
@@ -67,11 +68,18 @@ Page({
     console.log(this.data.phone)
     console.log(this.data.longitude)
     console.log(this.data.latitude)
+    var re =/^(13[0-9]|17[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+    // console.log(re.test(this.data.phone),'正则测试结果') 
     if (this.data.gsmc == null || this.data.qysh == null || this.data.address == null || this.data.lxr == null || this.data.phone == null) {
       wx.showModal({
         title: '提示',
         content: '请填写完整信息',
       })
+    } else if (re.test(this.data.phone) == false || this.data.phone.length<11){
+        wx.showModal({
+          title: '提示',
+          content: '请输入合法的手机号',
+        })
     } else {
       wx.request({
         url: `${getApp().data.url}/miniApps/enterprise/enterpriseRegister`,

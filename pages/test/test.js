@@ -1,4 +1,4 @@
-// pages/gonggao/gonggao.js
+// pages/test/test.js
 Page({
 
   /**
@@ -12,44 +12,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-  gonggaoInfo:function(e){
-    console.log(e.currentTarget.dataset.content)
-    var content = e.currentTarget.dataset.content
-    wx.navigateTo({
-      url: '../gonggaoInfo/gonggaoInfo?content='+content,
-    })
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    var that = this;
     wx.request({
-      url: `${getApp().data.url}/notification/getTzggList`,
+      url: "https://iauth-sandbox.wecity.qq.com/new/cgi-bin/auth.php",
       data: {
-        "page": "",
-        "type": "企业端",
-        "maintenanceWorkerId": getApp().data.qyId
+        "signature": "jfhm5RiinxD+qusloAV/hEhV+cVhPTQ2NzkmbT1hdXRoJnQ9MTUyNTMyOTY1OTU2MiZlPTYwMA==",
+        "appid": "4679",
+        "redirect": "test.html",
+        "uid": "123232ee332",
+        "type": 0
       },
       method: 'POST',
       header: {
-        "Content-Type": "application/json",
-        "Cookie": getApp().data.jsessionid
+        "Content-Type": "application/json"
       },
       success: function (res) {
-        console.log(res.data);
-        that.setData({
-          list: res.data.data
-        })
+        console.log(res)
       },
       fail: function (res) {
         // fail
@@ -58,6 +35,20 @@ Page({
         // complete
       }
     })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
   },
 
   /**

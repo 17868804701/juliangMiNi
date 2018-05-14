@@ -9,7 +9,7 @@
 </view>
 <view class='item'>
  <text>联系电话</text>
- <input placeholder='17868804701' value='{{lxdh}}' bindinput='lxdh'></input>
+ <input placeholder='17868804701' value='{{lxdh}}' bindinput='lxdh' maxlength='11'></input>
 </view>
 <text class='tip'>*可以对企业的基本信息进行修改</text>
 <button class='update' bindtap='update'>提交</button>

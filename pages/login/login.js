@@ -80,6 +80,11 @@ Page({
       url: '../register/register',
     })
   },
+  reset:function(){
+    wx.navigateTo({
+      url: '../resetpwd/resetpwd',
+    })
+  },
   login: function () {
     console.log(this.data.username)
     console.log(this.data.password)
@@ -97,7 +102,7 @@ Page({
           "Content-Type": "application/json"
         },
         success: function (res) {
-          console.log(res.data);
+          console.log(res);
           if (res.data.success == true) {
             getApp().data.qyId = res.data.enterprise.qyId;
             getApp().data.iphone = res.data.enterprise.iphone;
