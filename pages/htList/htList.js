@@ -29,11 +29,11 @@ Page({
     
     var that = this;
     wx.request({
-      url: `${getApp().data.url}/miniApps/contract/contractList`,
-      data: {
-        "qyId": getApp().data.qyId,
-      },
-      method: 'POST',
+      url: `${getApp().data.url}/miniApps/contract/contractList?qyId=` + getApp().data.qyId,
+      // data: {
+      //   "qyId": getApp().data.qyId,
+      // },
+      method: 'GET',
       header: {
         "Content-Type": "application/json",
         "Cookie": getApp().data.jsessionid 

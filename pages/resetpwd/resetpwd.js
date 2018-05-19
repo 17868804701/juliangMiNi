@@ -80,12 +80,21 @@ Page({
       },
       success: function (res) {
        if(res.data.success==true){
-          wx.showToast({
-            title: '密码已重置',
-          })
-          wx.redirectTo({
-            url: '../login/login',
-          })
+         wx.showModal({
+           title: '提示',
+           content: '密码重置成功，新密码为：123456',
+           success: function (res) {
+             if (res.confirm) {
+               wx.redirectTo({
+                 url: '../login/login',
+               })
+             } else if (res.cancel) {
+               wx.redirectTo({
+                 url: '../login/login',
+               })
+             }
+           }
+         })
        } else {
          wx.showModal({
            title: '提示',
