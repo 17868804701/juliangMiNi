@@ -135,7 +135,12 @@ Page({
         title: '提示',
         content: '至少上传以一张照片',
       })
-    }else{
+    } else if (getApp().data.isBzMoney == '0') {
+      wx.showModal({
+        title: '提示',
+        content: '你还未交保证金，不能进行申报',
+      })
+    }  else{
       this.data.SheBeiList.errorImage1 = this.data.img[0];
       this.data.SheBeiList.errorImage2 = this.data.img[1];
       this.data.SheBeiList.errorImage3 = this.data.img[2];
@@ -160,7 +165,12 @@ Page({
         title: '提示',
         content: '至少上传以一张照片',
       })
-    }else{
+    } else if (getApp().data.isBzMoney=='0'){
+        wx.showModal({
+          title: '提示',
+          content: '你还未交保证金，不能进行申报',
+        })
+    }  else{
       this.data.SheBeiList.errorImage1 = this.data.img[0] || "";
       this.data.SheBeiList.errorImage2 = this.data.img[1] || "";
       this.data.SheBeiList.errorImage3 = this.data.img[2] || "";

@@ -109,6 +109,7 @@ Page({
 
             getApp().data.jsessionid = "sid=" + res.data.jsessionid
             getApp().data.enterpriseNumber = res.data.enterprise.enterpriseNumber;
+            getApp().data.isBzMoney = res.data.isBzMoney;
             getApp().data.companyName = res.data.enterprise.companyName;
             getApp().data.iphone = res.data.enterprise.iphone;
             getApp().data.linkman = res.data.enterprise.linkman;
