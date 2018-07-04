@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/xy/xy",
     "pages/test/test",
     "pages/resetpwd/resetpwd",
-    "pages/xy/xy",
     "pages/pingjia/pingjia",
     "pages/index/index",
     "pages/gonggaoInfo/gonggaoInfo",

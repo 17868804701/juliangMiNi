@@ -3,7 +3,7 @@ App({
   data:{
     // url:"http://10.20.0.75:8888/",
     //  url:"http://118.89.49.82/juliangjidian",
-    url:"https://www.jljidian.com/juliangjidian/",
+    url:"https://www.jljidian.com/",
     qyId:"",
     companyName:"",
     jsessionid:"",
