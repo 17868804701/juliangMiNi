@@ -15,6 +15,27 @@ Page({
     this.data.qysh = e.detail.value;
     console.log(this.data.qysh)
   },
+  pwd: function (e) {
+    this.data.pwd = e.detail.value;
+    console.log(this.data.pwd)
+  },
+  pwds: function (e) {
+    this.data.password = e.detail.value;
+    console.log(this.data.password)
+  },
+  okpwd: function () {
+    if (this.data.pwd != this.data.password) {
+      wx.showModal({
+        title: '提示',
+        content: '两次密码不一致，请重新输入',
+      })
+      this.setData({
+        password: '',
+      })
+    }else{
+      console.log('相同')
+    }
+  },
   gsdz: function () {
     var that = this;
     // 选择地图
@@ -59,7 +80,7 @@ Page({
 
   },
   tijiao: function () {
- 
+
     console.log(this.data.gsmc)
     console.log(this.data.qysh)
     console.log(this.data.address)
@@ -68,18 +89,19 @@ Page({
     console.log(this.data.phone)
     console.log(this.data.longitude)
     console.log(this.data.latitude)
-    var re =/^(13[0-9]|17[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+    console.log(this.data.password,'密码')
+    var re = /^(13[0-9]|17[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
     // console.log(re.test(this.data.phone),'正则测试结果') 
-    if (this.data.gsmc == null || this.data.qysh == null || this.data.address == null || this.data.lxr == null || this.data.phone == null) {
+    if (this.data.gsmc == null || this.data.qysh == null || this.data.address == null || this.data.lxr == null || this.data.phone == null || this.data.password == null) {
       wx.showModal({
         title: '提示',
         content: '请填写完整信息',
       })
-    } else if (re.test(this.data.phone) == false || this.data.phone.length<11){
-        wx.showModal({
-          title: '提示',
-          content: '请输入合法的手机号',
-        })
+    } else if (re.test(this.data.phone) == false || this.data.phone.length < 11) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入合法的手机号',
+      })
     } else {
       wx.request({
         url: `${getApp().data.url}/miniApps/enterprise/enterpriseRegister`,
@@ -94,24 +116,24 @@ Page({
           "iphone": this.data.phone,
           "areaCode": "610113",
           "longitude": this.data.longitude,
-          "latitude": this.data.latitude
-
+          "latitude": this.data.latitude,
+          "password": this.data.password
         },
         method: 'POST',
         header: {
           "Content-Type": "application/json",
-          "Cookie": getApp().data.jsessionid 
+          "Cookie": getApp().data.jsessionid
         },
         success: function (res) {
           console.log(res.data);
-          if(res.data.success==true){
-              wx.showToast({
-                title: '注册成功',
-              })
-              wx.redirectTo({
-                url: '../login/login',
-              })
-          }else{
+          if (res.data.success == true) {
+            wx.showToast({
+              title: '注册成功',
+            })
+            wx.redirectTo({
+              url: '../login/login',
+            })
+          } else {
             wx.showModal({
               title: '提示',
               content: '注册失败',

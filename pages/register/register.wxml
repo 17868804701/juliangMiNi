@@ -1,23 +1,32 @@
 <view class="container">
-<view class='item'>
- <text>公司名称</text>
- <input placeholder='*请输入公司名称' bindinput='gsmc'></input>
-</view>
-<view class='item'>
- <text>企业税号</text>
- <input placeholder='*请输入企业税号' bindinput='qysh' maxlength='18'></input>
-</view>
-<view class='item'>
- <text>公司地址</text>
- <input placeholder='*请输入公司地址' value='{{address}}' bindtap='gsdz'></input>
-</view>
-<view class='item'>
- <text>联系人</text>
- <input placeholder='*请输入联系人' bindinput='lxr'></input>
-</view>
-<view class='item'>
- <text>联系方式</text>
- <input placeholder='*请输入联系人电话' type='number' bindinput='phone' maxlength='11'></input>
-</view>
-<button class='register' bindtap='tijiao'>立即注册</button>
+  <view class='item'>
+    <text>公司名称</text>
+    <input placeholder='*请输入公司名称' bindinput='gsmc'></input>
+  </view>
+  <view class='item'>
+    <text>企业税号</text>
+    <input placeholder='*请输入企业税号' bindinput='qysh' maxlength='18'></input>
+  </view>
+  <view class='item'>
+    <text>密码</text>
+    <input placeholder='*请输入密码' bindinput='pwd' maxlength='18' type='password'></input>
+  </view>
+  <view class='item'>
+    <text>确认密码</text>
+    <input placeholder='*请再次输入密码' value='{{password}}' bindblur='okpwd' type='password' bindinput='pwds' maxlength='18'></input>
+  </view>
+ 
+  <view class='item'>
+    <text>联系人</text>
+    <input placeholder='*请输入联系人' bindinput='lxr'></input>
+  </view>
+   <view class='item'>
+    <text>公司地址</text>
+    <input placeholder='*请输入公司地址' value='{{address}}' bindtap='gsdz'></input>
+  </view>
+  <view class='item'>
+    <text>联系方式</text>
+    <input placeholder='*请输入联系人电话' type='number' bindinput='phone' maxlength='11'></input>
+  </view>
+  <button class='register' bindtap='tijiao'>立即注册</button>
 </view>
